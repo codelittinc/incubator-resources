@@ -1,4 +1,5 @@
-##Encryption
+Encryption
+============
 
 Encryption is to be used at all times when transmitting anything more sensitive than your first name. 
 
@@ -29,7 +30,7 @@ PGP/GPG Plugin:
 Encyrption key manager/protocol:
 
 - Arch Linux: `sudo pacman -S gnupg` 
--- Documentation here: https://wiki.archlinux.org/index.php/GnuPG 
+  - Documentation here: https://wiki.archlinux.org/index.php/GnuPG 
 
 Email client options:
 
