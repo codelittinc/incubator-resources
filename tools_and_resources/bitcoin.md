@@ -25,11 +25,13 @@ A list of resources and a high-level primer into Bitcoin.
   - Self-governance is the best regulation - in the best interest of all actors to act honestly 2008 was a manfistation of centralized institutional failure - central banking and central counterparty clearing
   - Nature of incentives with centralized institutions and centralized regulation is that power corrupts. Those who need to be regulated the most, have power over system.
 
+
+
 - **The evil that is Bitlicense**
   - See above under the regulation section. 
   - [Why Bitlicense, NYC, and Ben Lawsky are evil](http://falkvinge.net/2014/08/05/why-the-proposed-nyc-bitcoin-regulations-are-absolute-total-bullshit/)
 
 ##Sites
-http://www.reddit.com/r/bitcoin
-http://bitcointalk.net
+- http://www.reddit.com/r/bitcoin
+- http://bitcointalk.org
 
