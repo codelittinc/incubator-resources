@@ -17,7 +17,7 @@ Encryption key manager/protocol, Gpg4win (GnuPG implementation on OSx): https://
 
 Email client options:
 
-- Airmail beta (246. 247 doesn't work with GPG plugin for some reason): [Hockeyapp Download page](https://rink.hockeyapp.net/apps/84be85c3331ee1d222fd7f0b59e41b04)
+- Airmail beta (Version 1.5 (250) doesn't work with GPG plugin for some reason): [Hockeyapp Download page](https://rink.hockeyapp.net/apps/84be85c3331ee1d222fd7f0b59e41b04)
 - Thunderbird by Mozilla: https://www.mozilla.org/en-US/thunderbird/
 
 PGP/GPG Plugin:
