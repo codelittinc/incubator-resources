@@ -22,7 +22,7 @@ A list of resources and a high-level primer into Bitcoin.
   - Regulation doesn't work. Even if it did, Bitcoin doesn't need regulation
   - Decentralized, consent driven asset as a currency vs.centralized, permission based debt as a currency
   - Prevention vs. Regulation
-  - Self-governance is the best regulation - in the best interest of all actors to act honestly 2008 was a manfistation of centralized institutional failure - central banking and central counterparty clearing
+  - Self-governance is the best regulation - in the best interest of all actors to act honestly 2008 was a manifestation of centralized institutional failure - central banking and central counterparty clearing
   - Nature of incentives with centralized institutions and centralized regulation is that power corrupts. Those who need to be regulated the most, have power over system.
 
 

@@ -7,13 +7,13 @@ Why? Privacy and security.
 
 ###Email
 
-PGP/GPG encrypted email is a must. Regardless of your distribution or OS, you'll need a encyrption key manager, email client, and compatible PGP/GPG plugin. 
+PGP/GPG encrypted email is a must. Regardless of your distribution or OS, you'll need a encryption key manager, email client, and compatible PGP/GPG plugin. 
 
 Here is a good explanation of [PGP/GPG encryption and how it works.](https://www.mailvelope.com/help#basics)
 
 ####Mac
 
-Encryption key manager/protocol, Gpg4win (GnuPG implementation on OSx): https://gpgtools.org/
+Encryption key manager/protocol, GPGTools (GnuPG implementation on OS X): https://gpgtools.org/
 
 Email client options:
 
