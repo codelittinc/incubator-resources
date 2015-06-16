@@ -10,11 +10,11 @@ Native tools that need to be downloaded will have a download link
 
 ####ALL EMPLOYEES
 
-1. [Google Business Apps](google.com/a/codelitt.com) (Basically Gmail, Google Docs, Google Hangouts for conference calls)
-2. Hipchat [Download](https://www.hipchat.com/downloads) (We mostly use this to chat internally)
-3. Slack [Sign in and then download](https://slack.com/) (Used occassionaly and with partners)
-4. Btsync [Download](http://getsync.com/) (P2P, encrypted alternative to Dropbox)
-5. [Trello](https://trello.com/) (PM and tracking)
+1. [Google Business Apps](google.com/a/codelitt.com)- (Basically Gmail, Google Docs, Google Hangouts for conference calls)
+2. Hipchat - [Download](https://www.hipchat.com/downloads) - (We mostly use this to chat internally)
+3. Slack - [Sign in and then download](https://slack.com/) - (Used occassionaly and with partners)
+4. Btsync - [Download](http://getsync.com/) - (P2P, encrypted alternative to Dropbox)
+5. [Trello](https://trello.com/) - (PM and tracking)
 
 ####ENGINEERING SPECIFIC
 
@@ -23,8 +23,14 @@ Native tools that need to be downloaded will have a download link
 
 ####SALES/MARKETING SPECIFIC
 
+1. Add info here
+
+
 ####DESIGN TEAM SPECIFIC
 
+1. Add info here
+
+-------
 
 ##Things you'll need to set up
 
@@ -32,9 +38,12 @@ Native tools that need to be downloaded will have a download link
 
 1. [Encryption](/best_practices/encryption.md) - particularly PGP 
 
+
+
 ####ENGINEERING
 
 1. SSH Key for your @codelitt.com email address
+
 
 
 ##Things you'll need to know
