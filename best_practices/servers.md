@@ -7,7 +7,7 @@ I check our logwatch email every morning and thoroughly enjoy watching several h
 
 On large scale, you'll be better off with a full automated setup using something like [Shipyard](https://shipyard-project.com/) however sometimes you're just creating a single server which is what this is meant to cover. Similar practices can be applied to setting up docker hosts or with deployment/management tools like Chef/Puppet.
 
-####First things first
+###First things first
 
 We don't even have a password for our root user. We'll want to select something random and complex. We use a password manager's password generater set to the most difficult setting. The PW manager saves the password and it is encrypted with access only given by a long master password. A couple of redundancies are provided here (long, complex, random password + password is stored behind encryption/another long password). You'll only need this if you can't SSH in or lose your sudo password. 
 
@@ -18,7 +18,7 @@ Next you'll need to update the repositories and upgrade your system applying the
     # apt-get update
     # apt-get upgrade
 
-####Add your user
+###Add your user
 
 You should never be logging on to a server as root. We follow a similar convention as Bryan in our user name, but you could use whatever convention you'd like. With a small team, having one login user hasn't been an issue for us, but with a larger team best practice would dictate that different users would be setup with different levels of permission only granting sudo permissions to a select few. 
 
@@ -29,7 +29,7 @@ You should never be logging on to a server as root. We follow a similar conventi
 
 Remember `chmod 700` means that owner can read, write, execute. We're still root but in a minute we'll recursively `chown` this folder for the deploy user and deploy group. Only this user should have access to do anything with the .ssh folder.
 
-####Require ssh key authentication
+###Require ssh key authentication
 
 We tend to avoid passwords for logging into servers. There was a lot of [discussion](https://news.ycombinator.com/item?id=5316691) around this after Bryan's original guide came out, but I tend to fall into this camp as well. Here are a few notes on this:
 
@@ -51,7 +51,7 @@ Let's set the right permissions based on the Linux security [principal of least 
 
 We're going to come back in a second after we've properly tested our deploy user and sudo to disable logging in as the root user and enforce ssh key logins only. 
 
-####Test `deploy` user and setup sudo
+###Test `deploy` user and setup sudo
 
 We're going to test logging in as deploy, while keeping our ssh connection as `root` open just in case. If it works, we'll use our open connection as `root` user to set a password for deploy. Since we're disabling password logins, this password will be used when sudo-ing. Again we use a pw manager to create a complex and random password, saving it behind an encrypted wall, and sharing it among the team (syncing the encrypted pw file). 
 
@@ -69,7 +69,7 @@ Add the `deploy` user below the `root` user as shown below. Make sure to comment
 
 
 
-####Enforce ssh key logins
+###Enforce ssh key logins
 
 ssh configuration for the machine is stored here:
 
@@ -85,7 +85,7 @@ Enable all these rules by restarting the ssh service. You'll probably need to re
     # service ssh restart
 
 
-####Setting up a firewall
+###Setting up a firewall
 
 There are usually two camps. Those who use IPtables directly and those who use a handy interface called `ufw` which is a layer on top of IPtables meant to simplify things. Simple is generally better with security. The [DigitalOcean ufw](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server) is really good and goes over the basics.
 
@@ -113,24 +113,87 @@ The first one is a redundancy measure that makes sure that only connections from
 
 
 
-####Automated security updates
+###Automated security updates
 
-####fail2ban
+I like these. They're not perfect, but it's better than missing patches as they come out. 
+
+    apt-get install unattended-upgrades
+
+    vim /etc/apt/apt.conf.d/10periodic
+
+Update this file to match this:
+
+    APT::Periodic::Update-Package-Lists "1";
+    APT::Periodic::Download-Upgradeable-Packages "1";
+    APT::Periodic::AutocleanInterval "7";
+    APT::Periodic::Unattended-Upgrade "1";
+
+I generally agree with Bryan that you'll want to disable normal updates and only enable security updates. The idea here is that you don't want an application going down without you knowing about it because some package was updated that it relies on while security patches very rarely create dependency nightmares at an application level. 
+
+    vim /etc/apt/apt.conf.d/50unattended-upgrades
+
+
+Make the file look like this:
+
+    Unattended-Upgrade::Allowed-Origins {
+        "Ubuntu lucid-security";
+        //"Ubuntu lucid-updates";
+    };
+
+You're all set. 
+
+
+###fail2ban
 
 ![Banned gif](http://knowyourmeme.com/photos/254517-downvoting-roman-commodus-thumbsdown)
 
-**fail2ban** is a great package that actively blocks suspicious activity as it occurs. From their [wiki](http://www.fail2ban.org/wiki/index.php/Main_Page) Fail2ban scans log files (e.g. `/var/log/apache/error_log`) and bans IPs that show the malicious signs -- too many password failures, seeking for exploits, etc...Out of the box Fail2Ban comes with filters for various services (apache, courier, ssh, etc).
+fail2ban is a great package that actively blocks suspicious activity as it occurs. From their [wiki](http://www.fail2ban.org/wiki/index.php/Main_Page) Fail2ban scans log files (e.g. `/var/log/apache/error_log`) and bans IPs that show the malicious signs -- too many password failures, seeking for exploits, etc...Out of the box Fail2Ban comes with filters for various services (apache, courier, ssh, etc).
 
     apt-get install fail2ban
 
 
-####2 Factor Authentication
+###2 Factor Authentication
 
-2FA
+2FA is not optional for us. When building [Incoin](https://www.incoin.io) or anything else that has very sensitive requirements. Theoretically, if you're enforcing 2FA (on top of all these other measures), then in order to gain access to your server, the attacker would have to have:
 
-####Logwatch 
+1. Access to your certificate and key to access VPN
+2. Access to your computer to have your private key
+3. Access to your passphrase for your private key
+4. Access to your phone for 2FA
 
-This is really more of a simple pleasure and a monitoring tool that helps you see what's going on after the fact. 
+These are quite a few hurdles to jump. Even then to gain root access via sudo they'd have to have deploy's password that is stored behind AES encryption (5). 
+
+Install this package
+
+    $ apt-get install libpam-google-authenticator
+
+Set up by running this command and following the instructions:
+
+    $ su deploy
+    $ google-authenticator
+
+2FA is very easy and adds a great layer of security. 
+
+###Logwatch 
+
+This is really more of a simple pleasure and a monitoring tool that helps you see what's going on after the fact. Logwatch monitors your logfiles and when configured sends you a daily email with the information parsed very nicely. The output is quite entertaining to watch and you'll be surprised at how many attempts are made every day to gain access to your server. I install it if for no other reason than to show the team how important good security is. 
+
+There's a great writeup by [DigitalOcean on Logwatch install and config], but if we're keeping to 10 minutes we'll just install it and run a cron job to run it and email us daily. 
+
+    $ apt-get install logwatch
+
+Add a cron job
+
+    $ vim /etc/cron.daily/00logwatch
+
+Add this line to the cron file:
+
+    /usr/sbin/logwatch --output mail --mailto you@example.com --detail high
+
+
+###All done
+
+There you are. Your server is secure. Your main concern and point of vunerability will be your application and services. These are another animal entirely though. 
 
 ------
 [^1]: Make sure it's `.pub`. This seems to be very simple, but I've seen two people (both not members of my organization. Quick way to get a pink slip.) in my career, send me their private key (`id_rsa` without the .pub extension) when asking for their public keys. 
