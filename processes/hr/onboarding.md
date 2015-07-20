@@ -3,6 +3,15 @@ Onboarding
 
 Are you stoked?
 
+##Things you'll need to have signed
+
+
+1. Offer letter - This is usually the first thing you'll sign. It covers compensation, your team, and your general responsibilities. This must be signed by the date on the letter in order for the offer to still be valid. 
+
+2. NDA - Unfortunately this is a necessary evil. Anything exclusively Codelitt Incubator related, is open-sourced and publicly available. However, our customers do prefer a great degree of confidentiality. The NDA protects our customers' confidential information. 
+
+3. Employee/Contractor agreement - This is a more binding and more detailed version of the offer letter. It also covers items such as inventions, etc.
+
 ##Tools you'll need access to
 
 Native tools that need to be downloaded will have a download link
