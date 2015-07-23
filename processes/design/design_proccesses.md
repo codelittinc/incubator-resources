@@ -77,47 +77,47 @@ Codelitt - Project Name - Specific Feature - ddmmyy (without the spaces in betwe
 
 - We divide folder structure like so:
 
-      // Project X
+        // Project X
 
-        // Design
+          // Design
 
-          // WIP (work in progress)
+            // WIP (work in progress)
 
-            // IMGs
+              // IMGs
 
-              // PNGs
+                // PNGs
 
-              // SVGs
+                // SVGs
 
-            // Feature 1 (App, Test Harness, Emails, etc)
+              // Feature 1 (App, Test Harness, Emails, etc)
 
-              Codelitt-Project X-Feature 1-WIP-ddmmyy.ai
+                Codelitt-Project X-Feature 1-WIP-ddmmyy.ai
 
-              Codelitt-Project X-Feature 1-WIP-ddmmyy.pdf
+                Codelitt-Project X-Feature 1-WIP-ddmmyy.pdf
 
-            // Feature 2 (App, Test Harness, Emails, etc)
+              // Feature 2 (App, Test Harness, Emails, etc)
 
-              Codelitt-Project X-Feature 2-WIP-ddmmyy.ai
+                Codelitt-Project X-Feature 2-WIP-ddmmyy.ai
 
-              Codelitt-Project X-Feature 2-WIP-ddmmyy.pdf
+                Codelitt-Project X-Feature 2-WIP-ddmmyy.pdf
 
-        
+          
 
-          // Final
+            // Final
 
-            // IMGs
+              // IMGs
 
-              // PNGs
+                // PNGs
 
-              // SVGs
+                // SVGs
 
-              // JPEG
+                // JPEG
 
-            // Feature 1
+              // Feature 1
 
-              Codelitt-Project X-Feature 1-ddmmyy.ai
+                Codelitt-Project X-Feature 1-ddmmyy.ai
 
-              Codelitt-Project X-Feature 1-ddmmyy.pdf
+                Codelitt-Project X-Feature 1-ddmmyy.pdf
 
   
 ##Emails
