@@ -35,12 +35,12 @@ During the technical interview, we are not going to be asking you to recite obsu
 #### Do you want to know us better?
 * Ask questions
 * Get to know our stuff:
-  * Github
-  * Blog
-  * Reddit
-  * Twitter
-  * Facebook
-  * Linkedin
+  * [Github](https://github.com/codelittinc)
+  * [Blog](http://www.codelitt.com/blog/)
+  * [Reddit](https://www.reddit.com/r/codelitt/)
+  * [Twitter](https://twitter.com/codelittinc)
+  * [Facebook](https://www.facebook.com/codelitt)
+  * [Linkedin](https://www.linkedin.com/company/codelitt-incubator)
 
 #### We will give you feedback
 We believe that feedback is an amazing improvement tool. Whether you get the job or not, you can use the feedback to improve yourself and come back during our next hiring round.
