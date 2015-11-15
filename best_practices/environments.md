@@ -4,8 +4,12 @@ This is a shell script which basically any engineer can run in development or pr
 ```shell
 #!/bin/bash
 
-PROJECT_NAME=<project-name>
-PROJECT_MAIN_LANGUAGE=<main-language>
+####### Project configuration #######
+PROJECT_NAME=outnix
+PROJECT_MAIN_LANGUAGE=ruby
+#####################################
+
+UPPERCASE_PROJECT_NAME=$(echo $PROJECT_NAME | tr '[a-z]' '[A-Z]')
 ATTACH_ON_CONTAINER=$PROJECT_MAIN_LANGUAGE
 DB_CONTAINER_NAME=$PROJECT_NAME-db
 PROJECT_CONTAINER_NAME=$PROJECT_NAME-$PROJECT_MAIN_LANGUAGE
@@ -34,8 +38,7 @@ run_db_container(){
     start_container $DB_CONTAINER_NAME
   else
     echo 'Creating db container'
-    docker run --name $DB_CONTAINER_NAME -e POSTGRES_PASSWORD=postgres
--d postgres
+    docker run --name $DB_CONTAINER_NAME -e POSTGRES_PASSWORD=postgres -d postgres
   fi
 }
 
@@ -54,16 +57,15 @@ run_project_container(){
     rm Dockerfile
     docker run \
       -ti \
-      --name outnix-ruby \
-      -e <main-name-uppercase>_DATABASE_PASSWORD=postgres \
-      -e <main-name-uppercase>_DATABASE_USER=postgres \
+      --name $PROJECT_CONTAINER_NAME \
+      -e $UPPERCASE_PROJECT_NAME'_DATABASE_PASSWORD'=postgres \
+      -e $UPPERCASE_PROJECT_NAME'_DATABASE_USER'=postgres \
       -e SECRET_KEY=sk_test_y7BG4WqA1liD1mRIAO8Uciei \
       -e STRIPE_PUBLISHABLE_KEY=pk_test_LSVTyulbru3fsiBrYJdI8zjx \
       -v $(pwd):/share \
       -p 9018:3000 \
       -p 9019:8080 \
-      --link $DB_CONTAINER_NAME:db codelittinc/$PROJECT_NAME /bin/bash
--l
+      --link $DB_CONTAINER_NAME:db codelittinc/$PROJECT_NAME /bin/bash -l
   fi
 }
 
