@@ -1,4 +1,4 @@
-Codelitt Incubator Resources
+Codelitt Incubator Resources for Startups and Product Teams
 ===================
 
 Processes, policies, and tools for startups. These are what we use at [Codelitt Incubator](http://www.codelitt.com), but they can be freely adapted to almost any startup. All open sourced and open for contribution. 
