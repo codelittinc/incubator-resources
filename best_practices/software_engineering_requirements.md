@@ -1,6 +1,6 @@
 # What Every Software Engineer Should Know (at Codelitt Incubator) 
 
-We have a lot of different specialties at our company. Backend, frontend, mobile, machine learning/AI, etc across many different languages and frameworks. However, regardless of specialty, there are some common skills, methodologies, and theories that every software engineer at our company should know.  
+We have a lot of different specialties at our company. Backend, frontend, mobile, machine learning/AI, etc across many different languages and frameworks. However, regardless of specialty, there are some common skills, methodologies, and theories that every software engineer at our company should know. Many of these do come with what we feel are fair assumptions (e.g. if you know how to fix `rebase` and `merge` conflicts in `git`, we feel it's safe to assume you know what these two strategies are). 
 
 Every engineer on our team has contributed to this doc and we welcome outside contributions.  
 
@@ -30,13 +30,13 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
     * Connect containers
 
-    * [Understand how we use them across environments](https://github.com/codelittinc/incubator-resources/blob/master/best_practices/environments.md)
+    * [Understand how we use them across environments](./environments.md)
 
 * How to read code and identify good/bad code
 
 * How to read documentation and debug
 
-    * Small note on this: Google is not bad. Google is your friend. HOWEVER, and this is a big "however," Google to *understand* the *core *reason your code is failing. Do NOT Google just to copy and paste someone else’s code. If you work with Ruby, understand what causes a NoMethod Error on a nil object for example. With Javascript, understand what causes the object to be undefined. This will make you a better programmer and better at debugging.
+    * Small note on this: Google is not bad. Google is your friend. HOWEVER, and this is a big "however," Google to *understand* the *core* reason your code is failing. Do NOT Google just to copy and paste someone else’s code. If you work with Ruby, understand what causes a NoMethod Error on a nil object for example. With Javascript, understand what causes the object to be undefined. This will make you a better programmer and better at debugging.
 
     * Same goes for documentation: Documentation almost always > tutorials. Tutorials are great to get the basics of something up and running, but they often skim over the why something works the way it works. 
 
@@ -72,7 +72,7 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
 * Understand the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) *and practice it every day*
 
-    * Ask yourself, will this action be done more than once? Even in the workplace! In the ML, AI and Robotics lab, a recent one I saw was needing to list out all of the images that had been trained by the network, create a folder for those images, and put the images in said folder. 
+    * Ask yourself, will this action be done more than once? Even in the workplace! In the ML, AI and Robotics lab, a recent one I saw was needing to list out all of the images that had been trained by the network, create a folder for those images, and put the images in said folder. That would be a HUGE pain to do manually.
 
 ![script all the things](../images/script-all-the-things.jpg)
 
