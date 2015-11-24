@@ -22,6 +22,8 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
     * How to fix `merge` conflicts, how to fix `rebase` conflicts
 
+    * [`merge` vs `rebase`](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
 * Basics of Docker
 
     * Create an image
