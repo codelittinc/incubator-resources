@@ -68,8 +68,8 @@ run_project_container(){
       --name $PROJECT_CONTAINER_NAME \
       -e $UPPERCASE_PROJECT_NAME'_DATABASE_PASSWORD'=postgres \
       -e $UPPERCASE_PROJECT_NAME'_DATABASE_USER'=postgres \
-      -e SECRET_KEY=sk_test_y7BG4WqA1liD1mRIAO8Uciei \
-      -e STRIPE_PUBLISHABLE_KEY=pk_test_LSVTyulbru3fsiBrYJdI8zjx \
+      -e SECRET_KEY=sk_test_fakeKeyHere \
+      -e STRIPE_PUBLISHABLE_KEY=pk_test_fakeKeyHere \
       -v $(pwd):/share \
       -p 9018:3000 \
       -p 9019:8080 \
