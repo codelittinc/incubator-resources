@@ -48,6 +48,8 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
 * Semantic Versioning ([http://semver.org/](http://semver.org/))
 
+* Data structures and algorithms
+
 * Good understanding of matrices and matrix manipulation in whatever language you are writing in. Particularly if interested in ML & AI you really want to understand how to manipulate your data. 
 
 # Methodologies
