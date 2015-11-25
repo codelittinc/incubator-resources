@@ -1,5 +1,13 @@
+Environments 
+=======
 
-This is a shell script which basically any engineer can run in development or production to spin everything up. It will live in `scripts/dev.sh`
+We've fairly scripted method for maintaining environments across teams, staging, and production. The process/scripts below are for a standard Ruby/React stack, but these can be customized to fit your needs.
+
+## 1. The bash script that starts it all
+
+
+This is a shell script which basically any engineer can run in development or production to spin everything up. It will live in `scripts/dev.sh`. It handles the build of the docker images and containers. You can customize it to your liking and environment. 
+
 
 ```shell
 #!/bin/bash
@@ -60,8 +68,8 @@ run_project_container(){
       --name $PROJECT_CONTAINER_NAME \
       -e $UPPERCASE_PROJECT_NAME'_DATABASE_PASSWORD'=postgres \
       -e $UPPERCASE_PROJECT_NAME'_DATABASE_USER'=postgres \
-      -e SECRET_KEY=sk_test_y7BG4WqA1liD1mRIAO8Uciei \
-      -e STRIPE_PUBLISHABLE_KEY=pk_test_LSVTyulbru3fsiBrYJdI8zjx \
+      -e SECRET_KEY=sk_test_fakeKeyHere \
+      -e STRIPE_PUBLISHABLE_KEY=pk_test_fakeKeyHere \
       -v $(pwd):/share \
       -p 9018:3000 \
       -p 9019:8080 \
@@ -81,6 +89,12 @@ init(){
 
 init
 ```
+
+## 2. Dockerfiles used by above script 
+
+### Dockerfile in your repo
+
+This is the Dockerfile.development file that is called by the shell script above. The Dockerfile.production is similar. 
 
 ```shell
 # This is our DEVELOPMENT dockerfile.
@@ -105,6 +119,9 @@ WORKDIR /share
 CMD ["/bin/bash", "-l"]
 ```
 
+###Base image called from Dockerfile.development
+
+This is the base image called from Dockerfile.development. We maintain it [here](https://github.com/codelittinc/dockerfiles/blob/master/ruby/Dockerfile)
 
 ```shell
 FROM ubuntu
@@ -145,7 +162,9 @@ EXPOSE 3000
 ```
 
 
-This make file predefines several commands which build our assets and our frontend app (React or Backbone depending)
+## 3. The makefile for building assets
+
+This makefile predefines several commands which build our assets and our frontend app (React) and is largely used with webpack. It lives alongside the Dockerfile.development and Dockerfile.production in the root directory of the repo.  
 
 
 ```shell

@@ -46,7 +46,7 @@ Native tools that need to be downloaded will have a download link
 ####ALL EMPLOYEES
 
 1. [Encryption](/best_practices/encryption.md) - particularly PGP 
-
+2. Payroll - Speak with Cody about getting setup with payroll. Depending on whether you are a US resident or not, there are two systems we use. 
 
 
 ####ENGINEERING
