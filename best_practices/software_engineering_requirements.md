@@ -38,7 +38,7 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
 * How to read documentation and debug
 
-    * Small note on this: Google is not bad. Google is your friend. HOWEVER, and this is a big "however," Google to *understand* the *core* reason your code is failing. Do NOT Google just to copy and paste someone else’s code. If you work with Ruby, understand what causes a NoMethod Error on a nil object for example. With Javascript, understand what causes the object to be undefined. This will make you a better programmer and better at debugging.
+    * Small note on this: Google is not bad. Google is your friend. HOWEVER, and this is a big "however," Google to *understand* the *core reason* your code is failing. Do NOT Google just to copy and paste someone else’s fix. If you work with Ruby, understand what causes a `NoMethod Error` on a nil object for example. With Javascript, understand what causes the object to be `undefined`. With Python, understand a `TypeError: 'str' object` is probably because strings are immutable data types. Et cetera. Understanding errors and why they commonly occur, will make you a better programmer, better at debugging, and give you more insight into the language/framework.
 
     * Same goes for documentation: Documentation almost always > tutorials. Tutorials are great to get the basics of something up and running, but they often skim over the why something works the way it works. 
 
