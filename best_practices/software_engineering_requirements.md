@@ -4,7 +4,7 @@ We have a lot of different specialties at our company. Backend, frontend, mobile
 
 Every engineer on our team has contributed to this doc and we welcome outside contributions.  
 
-# Tools and skills
+## Tools and skills
 
 * [Unix Basics and Command Line Tools](https://github.com/jlevy/the-art-of-command-line)
 
@@ -24,16 +24,6 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
     * [`merge` vs `rebase`](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
-* Basics of Docker
-
-    * Create an image
-
-    * Create a container
-
-    * Connect containers
-
-    * [Understand how we use them across environments](./environments.md)
-
 * How to read code and identify good/bad code
 
 * How to read documentation and debug
@@ -52,7 +42,18 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
 * Good understanding of matrices and matrix manipulation in whatever language you are writing in. Particularly if interested in ML & AI you really want to understand how to manipulate your data. 
 
-# Methodologies
+* Basics of Docker
+
+    * Create an image
+
+    * Create a container
+
+    * Connect containers
+
+    * [Understand how we use them across environments](./environments.md)
+
+
+## Methodologies
 
 * [TDD](https://en.wikipedia.org/wiki/Test-driven_development)
 
@@ -62,7 +63,8 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
 * [Continuous Delivery](https://en.wikipedia.org/wiki/Continuous_delivery)
 
-# Principles and theories 
+
+## Principles and theories 
 
 * Understand basic OO Analysis and Design
 
