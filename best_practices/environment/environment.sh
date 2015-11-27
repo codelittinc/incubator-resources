@@ -15,7 +15,8 @@ find_docker_id() {
   echo $(docker ps -a | grep $1 | sed 's/\([0-9a-z]\+\).*/\1/')
 }
 
-attach_to_container(){
+attach_to_project_container(){
+  echo 'attaching to project container'
   docker attach $(find_docker_id $PROJECT_CONTAINER_NAME)
 }
 
@@ -45,14 +46,14 @@ run_project_container(){
   if [ $docker_id ] ; then
     echo 'Starting project container on docker'
     start_container $PROJECT_CONTAINER_NAME
-    attach_to_container
+    attach_to_project_container
   else
     echo 'Creating project container'
 
     cp Dockerfile.development Dockerfile
     docker build -t codelittinc/$PROJECT_NAME .
     rm Dockerfile
-    docker run \
+    docker run -d \
       -ti \
       --name $PROJECT_CONTAINER_NAME \
       -e $UPPERCASE_PROJECT_NAME'_DATABASE_PASSWORD'=postgres \
@@ -61,17 +62,22 @@ run_project_container(){
       -p 9018:3000 \
       -p 9019:8080 \
       --link $DB_CONTAINER_NAME:db codelittinc/$PROJECT_NAME /bin/bash -l
+
+    docker_id=$(find_docker_id $PROJECT_CONTAINER_NAME)
+    docker start $docker_id
+
+    docker exec -it $docker_id echo 'Running bundle install'
+    docker exec -it $docker_id bundle install
+    docker exec -it $docker_id echo 'Setup the database'
+    docker exec -it $docker_id rake db:setup
+    docker exec -it $docker_id rake db:seed
+    attach_to_project_container
   fi
 }
 
 init(){
   run_db_container
   run_project_container
-
-  echo -e "Next steps:\n"
-  echo -e "\t1. Bundle install"
-  echo -e "\t2. rake db:create"
-  echo -e "\t3. run ./script/seed.sh from your docker host"
 }
 
 init
