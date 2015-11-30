@@ -9,7 +9,7 @@ if [ -z "$DOCKERHUB_USER" ]; then
 fi
 
 if [ -z "$DEPLOY_TYPE" ]; then
-  exit "You need to pass the deploy type(DEPLOY_TYPE), example: qa, production, beta e etc."
+  exit "You need to pass the deploy type(DEPLOY_TYPE), example: qa, production, beta, etc."
 fi
 
 if [ -z "$SERVER_USER" ]; then
