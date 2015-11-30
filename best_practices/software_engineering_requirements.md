@@ -10,17 +10,21 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
 * Proficiency in at least **ONE **CLI text editor (nano, vim, etc). Absolutely necessary to manage, debug, troubleshoot (and more) remote servers. We're partial to vim, but pick your poison.
 
+    * [Learn Vim with a game](http://vim-adventures.com/)
+
+    * Install Vim and run `vimtutor`
+
 * Version control, specifically the ins and outs of `git`
 
-    * `git` workflow
+    * `git` [workflow](http://www.git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows)
 
     * [Tig command line tool](https://github.com/jonas/tig)
 
     * Advanced checkouts (to specific commits, HEAD, etc)
 
-    * Cherry picking in `git`
+    * [Cherry picking](http://www.git-scm.com/docs/git-cherry-pick) in `git`
 
-    * How to fix `merge` conflicts, how to fix `rebase` conflicts
+    * How to fix [`merge`](http://www.git-scm.com/book/en/v2/Git-Tools-Advanced-Merging) conflicts, how to fix [`rebase`](http://www.git-scm.com/docs/git-rebase) conflicts
 
     * [`merge` vs `rebase`](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
@@ -38,11 +42,11 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
 * Semantic Versioning ([http://semver.org/](http://semver.org/))
 
-* Data structures and algorithms
+* [Data structures](https://github.com/prakhar1989/awesome-courses#cs-theory) and [algorithms](https://github.com/tayllan/awesome-algorithms)
 
 * Good understanding of matrices and matrix manipulation in whatever language you are writing in. Particularly if interested in ML & AI you really want to understand how to manipulate your data. 
 
-* Basics of Docker
+* [Basics of Docker](http://docs.docker.com/linux/started/)
 
     * Create an image
 
