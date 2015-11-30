@@ -13,11 +13,11 @@ if [ -z "$DEPLOY_TYPE" ]; then
 fi
 
 if [ -z "$SERVER_USER" ]; then
-  exit "You need to pass the server user(SERVER_USER) of the application will be running."
+  exit "You need to pass the server username (SERVER_USER) for the deployment of this application."
 fi
 
 if [ -z "$SERVER_HOST" ]; then
-  exit "You need to pass the server host(SERVER_HOST) of the application will be running."
+  exit "You need to pass the server hostname (SERVER_HOST) for the deployment of this application."
 fi
 
 CONTAINER_NAME=$PROJECT_NAME-$DEPLOY_TYPE
