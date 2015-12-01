@@ -53,9 +53,9 @@ init(){
 
      #To pass environment variable put then in this format and before the last line of the text above:
      #example:
-     #-e GLX_DATABASE_PASSWORD=------- \
-     #-e GLX_DATABASE_USER=------- \
-     #-e GLX_DATABASE_HOST=0.0.0.0
+     #-e PROJECT_EXAMPLE_DATABASE_PASSWORD=------- \
+     #-e PROJECT_EXAMPLE_DATABASE_USER=------- \
+     #-e PROJECT_EXAMPLE_DATABASE_HOST=0.0.0.0
 
      $SSH_CMD $DEPLOY_COMMAND
 
