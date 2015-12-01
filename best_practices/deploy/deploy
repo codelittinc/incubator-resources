@@ -29,23 +29,37 @@ generate_and_push_image(){
 
 init(){
 
-generate_and_push_image
 
-DEPLOY_COMMAND="""
-docker pull $DOCKERHUB_USER/$PROJECT_NAME;
-docker rm \$(docker ps -a -q -f name=previous-$CONTAINER_NAME);
-docker stop \$(docker ps -a -q -f name=$CONTAINER_NAME);
-docker rename $CONTAINER_NAME previous-$CONTAINER_NAME;
-docker run --name $CONTAINER_NAME
--p 3000:3000 -p 4000:4000 -d $DOCKERHUB_USER/$PROJECT_NAME:latest"""
+  echo "IMPORTANT!
+  You are deploying the project $PROJECT_NAME
+  USING THE PARAMETERS:
+    SERVER_USERNAME: $SERVER_USER
+    SERVER_HOST: $SERVER_HOST
+    DEPLOY_TYPE: $DEPLOY_TYPE"
 
-#To pass environment variable put then in this format and before the last line of the text above:
-#example:
-#-e GLX_DATABASE_PASSWORD=------- \
-#-e GLX_DATABASE_USER=------- \
-#-e GLX_DATABASE_HOST=0.0.0.0
+   echo -n "Are you sure that you want to continue? (y/n)? "
+   read answer
 
-$SSH_CMD $DEPLOY_COMMAND
+   if echo "$answer" | grep -iq "^y" ;then
+     generate_and_push_image
+
+     DEPLOY_COMMAND="""
+     docker pull $DOCKERHUB_USER/$PROJECT_NAME;
+     docker rm \$(docker ps -a -q -f name=previous-$CONTAINER_NAME);
+     docker stop \$(docker ps -a -q -f name=$CONTAINER_NAME);
+     docker rename $CONTAINER_NAME previous-$CONTAINER_NAME;
+     docker run --name $CONTAINER_NAME
+     -p 3000:3000 -p 4000:4000 -d $DOCKERHUB_USER/$PROJECT_NAME:latest"""
+
+     #To pass environment variable put then in this format and before the last line of the text above:
+     #example:
+     #-e GLX_DATABASE_PASSWORD=------- \
+     #-e GLX_DATABASE_USER=------- \
+     #-e GLX_DATABASE_HOST=0.0.0.0
+
+     $SSH_CMD $DEPLOY_COMMAND
+
+   fi
 }
 
 init
