@@ -8,6 +8,8 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
 * [Unix Basics and Command Line Tools](https://github.com/jlevy/the-art-of-command-line)
 
+* [Bash Academy](http://www.bash.academy/)
+
 * Proficiency in at least **ONE **CLI text editor (nano, vim, etc). Absolutely necessary to manage, debug, troubleshoot (and more) remote servers. We're partial to vim, but pick your poison.
 
     * [Learn Vim with a game](http://vim-adventures.com/)
