@@ -51,12 +51,12 @@ has also derived inspiration from the influential material.
 
 Here are some more resources to inspire your very own project structure:
 
-[Airbnb][airbnb]'s internal guide
-[rscss][rscss] (Reasonable System for CSS Stylesheet Structure)
-[Github's Own CSS][githubcss]
-[Codepen (Chris Coyier from CSSTricks)][codepen]
+[Airbnb][airbnb]'s internal guide  
+[rscss][rscss] (Reasonable System for CSS Stylesheet Structure)  
+[Github's Own CSS][githubcss]  
+[Codepen (Chris Coyier from CSSTricks)][codepen]  
 
-[This awesome Awesome list][awesomecss]
+[This awesome Awesome list][awesomecss]  
 
 [sassway]: http://thesassway.com/beginner/how-to-structure-a-sass-project
 [evernote]: https://github.com/evernote/sass-build-structure
