@@ -7,7 +7,7 @@ commits that not even you can understand!
 Some wisdom from:
 
 [Lullabot](https://www.lullabot.com/articles/git-best-practices-workflow-guidelines)  
-[tbaggery](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)  <- Tim Pope, so pay attention!
+[tbaggery](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)  <- Tim Pope, so pay attention!  
 [Seth Robertson](https://sethrobertson.github.io/GitBestPractices/)  
 [Open Stack](https://wiki.openstack.org/wiki/GitCommitMessages)  
 [Chris Beams](http://chris.beams.io/posts/git-commit/)  
