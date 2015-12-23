@@ -135,3 +135,74 @@ Nice! So, he goes over to `git`, and makes sure things are as they should be..
 Why, Joe, you make excellent `git` commit messages! How nice of you.
 
 
+Now, let's say Joe's co-worker, "Laura", also needs to make a commit (or two!).  
+
+She's discovered that the core Higgs-Boson Generator software has a fatal bug  
+that might cause a crash in the system at some point! So, she quickly devises  
+a solution. However, she doesn't quite know how to structure her `git` commits.  
+The problem is, the change that she needs to make in the Higgs-Boson Generator
+also requires software in the Recombobulator and Neuman-force Pullifier to be 
+modified! Oh, what is she to do?  
+
+But, don't worry! We have our trusty principles of `orthogonality`, `early and
+often commits`, and `not getting in the way`! (Laura is already good at individual
+commits!)  
+  
+What she decides to do is separate each commit into code that affects one module
+at a time:  
+
+      Slow Higgs-Boson Generator to 3/4 Impulse
+
+      http://www.trello.com/yyyyyyyyy
+
+      We thought the Higgs-Boson Generator would be able to sustain a full
+      impulse load of energy, but our simulated test suite shows that this
+      will eventually fail to be the case. However, the problem can be 
+      solved for 10^29 years by reducing the impulse input to 3/4ths of
+      our original projected load metric.
+
+      There are side effects that will require modification of other vital
+      modules:
+
+      - The Recombobulator will need a modification to the phase shift 
+      algorithm, since its resistance will increase quadratically with
+      our reduction of Higgs-Boson impulse.
+
+      - The Neuman-force Pullifier's output will be too low after this
+      change, which means it will need to listen for gaps in space time
+      to extract more energy from.
+
+---
+
+      Modify Recombobulator's phase shift algorithm
+
+      http://www.trello.com/zzzzzzzzz
+
+      Because the Higgs-Boson Generator's impulse load had to decrease,
+      we need to alter the phase shift algorithm of the recombobulator
+      to account for increased resistance. This will prevent an overload.
+
+      There are no projected side effects of this operation.
+
+
+---
+
+      Listen to space time in Neuman-force Pullifier
+
+      http://www.trello.com/aaaaaaaaa
+
+      We are no longer receiving enough energy from the Higgs-Boson
+      Generator, so we need to create a module that listens for gaps
+      in the space time continuum, and extracts energy that might be
+      present. We will then sustain normal levels for majority of
+      operating periods.
+
+      Side effects of this operation might include:
+
+      - Aliens
+
+      - Other dimensions
+
+      - Interdimensional Aliens
+
+Whew! You did good work, there, Laura!
