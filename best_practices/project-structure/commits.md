@@ -4,6 +4,7 @@ You're not the first person to use Git, and you won't be the last.
 Let's make sure you're not notable for making poorly-formed, unexplainable
 commits that not even you can understand!
 
+# Resources
 Some wisdom from:
 
 [AngularJS](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)
@@ -16,6 +17,9 @@ Some wisdom from:
 
 If you read the above links, you'll notice that there are a number of similarities. Let's try to distill
 their contents into a generic scaffolding that any of our projects may use.
+
+
+# A Solid Starting Point
 
 Starting with Tim Pope's standard:
 
@@ -46,6 +50,7 @@ In addition, we will be modifying our subject lines to follow the Angular exampl
 
 [Here](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#type) is a list of possible types, scopes and subjects.
 
+# More than Once
 That's a nice way to make commits, but it doesn't explain stuff _outside_ of actually
 making a single commit. How often? What change needs a commit?
 
@@ -111,6 +116,8 @@ after every line.
 
 Here are some examples to help you understand what this workflow is like.
 ---
+
+# Example 1 (Singular)
 Let's say "Joe" is working on a project in laser communications software.
 He found a way to increase throughput by improving an algorithm in the recombobulator module.
 Nice! So, he goes over to `git`, and makes sure things are as they should be..
@@ -139,6 +146,7 @@ Nice! So, he goes over to `git`, and makes sure things are as they should be..
 
 Why, Joe, you make excellent `git` commit messages! How nice of you.
 
+# Example 2 (Intertwined Components)
 
 Now, let's say Joe's co-worker, "Laura", also needs to make a commit (or two!).  
 
