@@ -6,6 +6,7 @@ commits that not even you can understand!
 
 Some wisdom from:
 
+[AngularJS](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)
 [Lullabot](https://www.lullabot.com/articles/git-best-practices-workflow-guidelines)  
 [tbaggery](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)  <- Tim Pope, so pay attention!  
 [Seth Robertson](https://sethrobertson.github.io/GitBestPractices/)  
@@ -40,6 +41,11 @@ Starting with Tim Pope's standard:
 
       - Use a hanging indent
 
+In addition, we will be modifying our subject lines to follow the Angular example above:  
+`<type>(<scope>): <subject>`
+
+[Here](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#type) is a list of possible types, scopes and subjects.
+
 That's a nice way to make commits, but it doesn't explain stuff _outside_ of actually
 making a single commit. How often? What change needs a commit?
 
@@ -73,9 +79,8 @@ It sounds easy, but it's also probably pretty easy to mess up. Here's the plan:
 
 ### Individual commits
 
-1. Create your first line. It may not exceed 50 characters. It must be capitalized.
-Make it in the present tense. Do not use the '-m' command, as you will not be able to 
-produce additional lines of input.
+1. Create your first line. It may not exceed 50 characters. It must be capitalized after the type, scope and subject.  
+Make it in the present tense. Do not use the '-m' command, as you will not be able to produce additional lines of input.
 
 2. Two newline characters later, Insert a link to any relevant Trello card that this commit came from.
 
@@ -151,7 +156,7 @@ commits!)
 What she decides to do is separate each commit into code that affects one module
 at a time:  
 
-      Slow Higgs-Boson Generator to 3/4 Impulse
+      fix(higgsCore) Slow Higgs-Boson Generator Impulse
 
       http://www.trello.com/yyyyyyyyy
 
@@ -174,7 +179,7 @@ at a time:
 
 ---
 
-      Modify Recombobulator's phase shift algorithm
+      fix(phaseRec) Improve phase shift algorithm
 
       http://www.trello.com/zzzzzzzzz
 
@@ -187,7 +192,7 @@ at a time:
 
 ---
 
-      Listen to space time in Neuman-force Pullifier
+      feat(neumanCore) Extract energy from space
 
       http://www.trello.com/aaaaaaaaa
 
@@ -206,3 +211,5 @@ at a time:
       - Interdimensional Aliens
 
 Whew! You did good work, there, Laura!
+
+That's all, for now. If you have any questions or comments about this document, be sure to drop us a message, raise an issue, or make a pull request!
