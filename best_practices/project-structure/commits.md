@@ -101,3 +101,37 @@ as best you can. This means not bundling different modules together in commits.
 after every line.
 
 3. Be careful not to impede others' work, and be particularly cautious with `rebase` and `merge`.
+
+# Examples
+
+Here are some examples to help you understand what this workflow is like.
+---
+Let's say "Joe" is working on a project in laser communications software.
+He found a way to increase throughput by improving an algorithm in the recombobulator module.
+Nice! So, he goes over to `git`, and makes sure things are as they should be..
+
+      Improve recombobulator module algorithm speed
+
+      http://www.trello.com/xxxxxxxx
+
+      The recombobulator's recombobulation algorithm is not functioning
+      as fast as it can. By tuning the bupropion frequency to drop every
+      other recombobuling, we can get twice the number of laser beams to
+      move through the stasis chamber.
+
+      We need as much throughput as possible, as we're already in the red
+      as far as new recombobulators go. This will allow us to be far more
+      efficient in our usage of recombobulators.
+
+      There are a number of side effects that this change may have. For
+      instance:
+      
+      - Antitheoretical energy sphere occurrences will increase.
+
+      - Beta and gamma ray energy will decrease.
+
+      - Lasers lasers lasers lasers lasers.
+
+Why, Joe, you make excellent `git` commit messages! How nice of you.
+
+
