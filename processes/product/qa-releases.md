@@ -2,6 +2,8 @@
 
 These are general. Every project should `cp` this file into their project, call it `QA-RELEASES-PROCESS.md` and update it with specifics and information. 
 
+Learn more about these processes in [this Udemy course](https://www.udemy.com/qa-software-testing-training-course/)
+
 ## New Features
 
 1. Branch develop into `feature/<feature-name>`.
