@@ -4,6 +4,44 @@ You're not the first person to use Git, and you won't be the last.
 Let's make sure you're not notable for making poorly-formed, unexplainable
 commits that not even you can understand!
 
+# Just get to the point
+
+If that's the way you roll, here's a commit message template!
+
+```
+
+# 50 Character maximum: <type>(<scope>): <Subject>
+
+# <Trello card link>
+
+# Truncate to 72 characters maximum:
+# Paragraph 1 explaining why this is necessary
+
+# - Optional bullet points
+
+# Paragraph 2 explaining how this change fixes X
+
+# - Optional bullet points
+
+# Paragraph 3 explaining what side effects result
+
+# - Optional bullet points
+
+# Pre-flight checks:
+# - Have you reviewed your code with git patch?
+# - Have you organized the commits into small, logical sections?
+# - Does each commit only touch one module at a time, if possible?
+# - Have you added any relevant changes to the patch notes?
+
+```
+Placed in `~/.gitconfig` like this:
+
+```
+[commit]
+  template = <path to template>/<template name here>
+```
+[Here](https://gist.github.com/CWelshE/d8f454ad9bb5cab0dede) it is in Gist format.
+
 # Resources
 Some wisdom from:
 
