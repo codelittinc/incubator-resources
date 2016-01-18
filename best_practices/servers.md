@@ -194,6 +194,7 @@ Add this line to the cron file:
 ###All done
 
 There you are. Your server is secure. Your main concern and point of vunerability will be your application and services. These are another animal entirely though. 
+[Check out](https://github.com/codelittinc/incubator-resources/blob/master/best_practices/secure-ssl-configuration.md) how to secure ssl configuration to get a perfect SSL Labs Score.
 
 ------
 [^1]: Make sure it's `.pub`. This seems to be very simple, but I've seen two people (both not members of my organization. Quick way to get a pink slip.) in my career, send me their private key (`id_rsa` without the .pub extension) when asking for their public keys. 
