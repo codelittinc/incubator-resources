@@ -2,9 +2,14 @@
 #MAINTAINER Codelitt, Inc.
 
 ####### Project configuration example #######
-PROJECT_NAME=outnix
-PROJECT_MAIN_LANGUAGE=ruby
+PROJECT_NAME=
+PROJECT_MAIN_LANGUAGE=
 #############################################
+
+if [ -z "$PROJECT_NAME" ] || [ -z "$PROJECT_MAIN_LANGUAGE" ]; then
+  echo 'Please setup the PROJECT_NAME and the PROJECT_MAIN_LANGUAGE!'
+  exit
+fi
 
 UPPERCASE_PROJECT_NAME=$(echo $PROJECT_NAME | tr '[a-z]' '[A-Z]')
 ATTACH_ON_CONTAINER=$PROJECT_MAIN_LANGUAGE
