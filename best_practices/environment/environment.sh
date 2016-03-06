@@ -16,26 +16,22 @@ ATTACH_ON_CONTAINER=$PROJECT_MAIN_LANGUAGE
 DB_CONTAINER_NAME=$PROJECT_NAME-db
 PROJECT_CONTAINER_NAME=$PROJECT_NAME-$PROJECT_MAIN_LANGUAGE
 
-find_docker_id() {
-  echo $(docker ps -a | grep $1 | sed 's/\([0-9a-z]\+\).*/\1/')
-}
-
-attach_to_project_container(){
+attach_to_project_container() {
   echo 'attaching to project container'
-  docker attach $(find_docker_id $PROJECT_CONTAINER_NAME)
+  docker attach $PROJECT_CONTAINER_NAME
 }
 
-start_container(){
+start_container() {
   container_name=$1
-  docker_id=$(find_docker_id $container_name)
+  docker_id=$container_name
   for action in "stop" "start"
   do
     docker $action $docker_id
   done
 }
 
-run_db_container(){
-  docker_id=$(find_docker_id $DB_CONTAINER_NAME)
+run_db_container() {
+  docker_id=$DB_CONTAINER_NAME
   if [ $docker_id ] ; then
     echo 'Starting db container on docker'
     start_container $DB_CONTAINER_NAME
@@ -45,8 +41,8 @@ run_db_container(){
   fi
 }
 
-run_project_container(){
-  docker_id=$(find_docker_id $PROJECT_CONTAINER_NAME)
+run_project_container() {
+  docker_id=$PROJECT_CONTAINER_NAME
 
   if [ $docker_id ] ; then
     echo 'Starting project container on docker'
@@ -68,7 +64,7 @@ run_project_container(){
       -p 9019:8080 \
       --link $DB_CONTAINER_NAME:db codelittinc/$PROJECT_NAME /bin/bash -l
 
-    docker_id=$(find_docker_id $PROJECT_CONTAINER_NAME)
+    docker_id=$PROJECT_CONTAINER_NAME
     docker start $docker_id
 
     docker exec -it $docker_id echo 'Running bundle install'
@@ -80,7 +76,7 @@ run_project_container(){
   fi
 }
 
-init(){
+init() {
   run_db_container
   run_project_container
 }
