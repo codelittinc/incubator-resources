@@ -21,6 +21,10 @@ attach_to_project_container() {
   docker attach $PROJECT_CONTAINER_NAME
 }
 
+get_container_id() {
+  echo "$(docker ps --filter="name=$1" --format={{.ID}})"
+}
+
 start_container() {
   container_name=$1
   docker_id=$container_name
@@ -31,8 +35,7 @@ start_container() {
 }
 
 run_db_container() {
-  docker_id=$DB_CONTAINER_NAME
-  if [ $docker_id ] ; then
+  if  [ "$(get_container_id $DB_CONTAINER_NAME)" ] ; then
     echo 'Starting db container on docker'
     start_container $DB_CONTAINER_NAME
   else
@@ -42,9 +45,7 @@ run_db_container() {
 }
 
 run_project_container() {
-  docker_id=$PROJECT_CONTAINER_NAME
-
-  if [ $docker_id ] ; then
+  if  [ "$(get_container_id $PROJECT_CONTAINER_NAME)" ] ; then
     echo 'Starting project container on docker'
     start_container $PROJECT_CONTAINER_NAME
     attach_to_project_container
@@ -64,14 +65,7 @@ run_project_container() {
       -p 9019:8080 \
       --link $DB_CONTAINER_NAME:db codelittinc/$PROJECT_NAME /bin/bash -l
 
-    docker_id=$PROJECT_CONTAINER_NAME
-    docker start $docker_id
-
-    docker exec -it $docker_id echo 'Running bundle install'
-    docker exec -it $docker_id bundle install
-    docker exec -it $docker_id echo 'Setup the database'
-    docker exec -it $docker_id rake db:setup
-    docker exec -it $docker_id rake db:seed
+    docker start $PROJECT_CONTAINER_NAME
     attach_to_project_container
   fi
 }
