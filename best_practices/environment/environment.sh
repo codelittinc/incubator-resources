@@ -22,9 +22,7 @@ attach_to_project_container() {
 }
 
 get_container_id() {
-    echo "$(docker ps --filter="name=$1" --format={{.ID}})"
-
-
+  echo "$(docker ps --filter="name=$1" --format={{.ID}})"
 }
 
 start_container() {
@@ -44,7 +42,6 @@ run_db_container() {
     echo 'Creating db container'
     docker run --name $DB_CONTAINER_NAME -e POSTGRES_PASSWORD=postgres -d postgres
   fi
-  exit 1
 }
 
 run_project_container() {
@@ -63,7 +60,6 @@ run_project_container() {
       --name $PROJECT_CONTAINER_NAME \
       -e $UPPERCASE_PROJECT_NAME'_DATABASE_PASSWORD'=postgres \
       -e $UPPERCASE_PROJECT_NAME'_DATABASE_USER'=postgres \
-      -e $UPPERCASE_PROJECT_NAME'_DATABASE_NAME'=building_project \
       -v $(pwd):/share \
       -p 9018:3000 \
       -p 9019:8080 \
