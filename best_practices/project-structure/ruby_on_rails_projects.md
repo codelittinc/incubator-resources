@@ -1,6 +1,6 @@
 # Ruby on rails code trustworthy tools
 
-The gems below are the ones being used here on codelitt to ensure a code which is readable, maintanable and secure.
+The gems below are the ones being used here on codelitt to ensure that the code made is readable, maintanable and secure.
 
 ### Code quality
 
@@ -65,7 +65,7 @@ Check code style
     rubocop
 
 Autofix
-    rubocop -A
+    rubocop -a
 ```
     
 ##### CI config
