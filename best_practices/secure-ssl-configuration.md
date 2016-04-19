@@ -5,9 +5,11 @@ This doc will detail the steps for getting an A+ SSL rating using Nginx on Ubunt
 
 ## Generate a certificate
 
-The first step in securing your server with SSL is to generate an SSL certificate. At this time, the only way to get a verified certificate that will be trusted across most Internet browsers is to pay for a certificate. 
+The first step in securing your server with SSL is to generate an SSL certificate. You can now use `LetsEncrypt` for a free certificate, or pay for one through third-party services.
+
 Some good providers include:
 
+* [LetsEncrypt](https://letsencrypt.org/)
 * [GoDaddy](https://godaddy.com/web-security/ssl-certificate)
 * [RapidSSL](https://www.rapidssl.com/)
 
