@@ -20,10 +20,9 @@ Native tools that need to be downloaded will have a download link
 ####ALL EMPLOYEES
 
 1. [Google Business Apps](google.com/a/codelitt.com)- (Basically Gmail, Google Docs, Google Hangouts for conference calls)
-2. Hipchat - [Download](https://www.hipchat.com/downloads) - (We mostly use this to chat internally)
-3. Slack - [Sign in and then download](https://slack.com/) - (Used occassionaly and with partners)
-4. Btsync - [Download](http://getsync.com/) - (P2P, encrypted alternative to Dropbox)
-5. [Trello](https://trello.com/) - (PM and tracking)
+2. Slack - [Sign in and then download](https://slack.com/) - (We mostly use this to chat internally and with partners)
+3. Syncthing - [Download](https://syncthing.net/) - (P2P, encrypted alternative to Dropbox)
+4. [Trello](https://trello.com/) - (PM and tracking)
 
 ####ENGINEERING SPECIFIC
 
