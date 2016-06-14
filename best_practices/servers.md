@@ -3,9 +3,11 @@ Your First 10 Minutes on a Server
 
 [My First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers), by Bryan Kennedy, is an amazing primer into securing a server against most attacks. It is a must read. We have a few modifications to his approach that we wanted to document as part of our efforts of externalizing our processes and best practices. We also wanted to spend a bit more time explaining a few things that newer guys may have to pull Googlefu out for.
 
-I check our logwatch email every morning and thoroughly enjoy watching several hundreds (sometimes 1000s) of attempts at gaining access with little prevail. This general overview works for Debian/Ubuntu servers which are our personal favourite choice. These usually only serve as hosts for docker containers, but principles still apply
+I check our logwatch email every morning and thoroughly enjoy watching several hundreds (sometimes 1000s) of attempts at gaining access with little prevail. This general overview works for Debian/Ubuntu servers which are our personal favourite choice. These usually only serve as hosts for docker containers, but principles still apply. We'll go more in depth in locking down a server specifically for use as a Docker host in another article. 
 
-On large scale, you'll be better off with a full automated setup using something like [Shipyard](https://shipyard-project.com/) however sometimes you're just creating a single server which is what this is meant to cover. Similar practices can be applied to setting up docker hosts or with deployment/management tools like Chef/Puppet.
+On large scale, you'll be better off with a full automated setup using something like [Ansible](https://github.com/ansible/ansible) or [Shipyard](https://shipyard-project.com/) however sometimes you're just creating a single server or working on a base for an Ansible recipe which is what this is meant to cover. 
+
+**Disclaimer: This is meant to serve as a primer and a base. You should extend upon it as your needs dictate**
 
 ###First things first
 
@@ -197,9 +199,12 @@ Add this line to the cron file:
 
 ###All done
 
-There you are. Your server is secure. Your main concern and point of vunerability will be your application and services. These are another animal entirely though. 
+There you are. Your main concern and point of vunerabilityafter completing this will be your application and services. These are another animal entirely though. 
+
+
+If you want to know more about our best practices, take a look in our [repository](https://github.com/codelittinc/incubator-resources). We open source all of our policies and best practices as well as continue to add to them there.
 
 ------
-[^1]: Make sure it's `.pub`. This seems to be very simple, but I've seen two people (both not members of my organization. Quick way to get a pink slip.) in my career, send me their private key (`id_rsa` without the .pub extension) when asking for their public keys. 
+[^1]: Make sure it's `.pub`. This seems to be very simple, but I've seen two people (both *not* members of our organization -- it would be a quick way to stop being part of our org.) in my career, send me their private key (`id_rsa` without the .pub extension) when asking for their public keys. 
 
 [^2]: There's a couple camps on whether to keep your SSH connection on a standard or non-standard port. See [here](https://www.adayinthelifeof.nl/2012/03/12/why-putting-ssh-on-another-port-than-22-is-bad-idea/) and [here](https://major.io/2013/05/14/changing-your-ssh-servers-port-from-the-default-is-it-worth-it/) for opposing sides.
