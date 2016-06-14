@@ -15,8 +15,8 @@ We don't even have a password for our root user. We'll want to select something 
 
 Next you'll need to update the repositories and upgrade your system applying the latest patches. We'll have a section for how to automate security upgrades later on. 
 
-    # apt-get update
-    # apt-get upgrade
+    apt-get update
+    apt-get upgrade
 
 ###Add your user
 
@@ -26,6 +26,12 @@ You should never be logging on to a server as root. We follow a similar conventi
     mkdir /home/deploy
     mkdir /home/deploy/.ssh
     chmod 700 /home/deploy/.ssh 
+
+Setup your prefered shell for the deploy user, here we use bash:
+
+```
+usermod -s /bin/bash deploy
+```
 
 Remember `chmod 700` means that owner can read, write, execute. We're still root but in a minute we'll recursively `chown` this folder for the deploy user and deploy group. Only this user should have access to do anything with the .ssh folder.
 
@@ -44,8 +50,8 @@ So let's make password authentication a thing of the past on our server. Copy th
 
 Let's set the right permissions based on the Linux security [principal of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege):
 
-    # chmod 400 /home/deploy/.ssh/authorized_keys
-    # chown deploy:deploy /home/deploy -R
+    chmod 400 /home/deploy/.ssh/authorized_keys
+    chown deploy:deploy /home/deploy -R
 
 `chmod 400` sets permissions so that the file can be read by owner. The second command, `chown` makes the user deploy and group deploy owners (recursively) of their home directory. We referenced this earlier in when setting read/write/execute permissions to owner for this directory.
 
@@ -73,7 +79,7 @@ Add the `deploy` user below the `root` user as shown below. Make sure to comment
 
 ssh configuration for the machine is stored here:
 
-    # vim /etc/ssh/sshd_config
+    vim /etc/ssh/sshd_config
 
 You'll want to add these lines to the file. I think they're pretty self-explanatory. You'll want to add the IP that you use to connnect. We have a company VPN setup with OpenVPN with cryptographic authentication so in order to connect to a server, you must also be authenticated and connected to the VPN. 
 
@@ -82,8 +88,7 @@ You'll want to add these lines to the file. I think they're pretty self-explanat
     AllowUsers deploy@(your-VPN-or-static-IP)
 
 Enable all these rules by restarting the ssh service. You'll probably need to reconnect (do so by using your deploy user!) 
-    # service ssh restart
-
+    service ssh restart
 
 ###Setting up a firewall
 
@@ -95,7 +100,7 @@ By default `ufw` should deny all incoming connections and allow all outgoing con
 
 First we'll want to make sure that we are supporting IPv6. Just open up the config file. 
 
-    $ vim /etc/default/ufw
+    vim /etc/default/ufw
 
 Set IPv6 to yes. 
 
@@ -103,11 +108,11 @@ Set IPv6 to yes.
 
 For the rest of the ports that we're going to open up, we can just use the ufw tool from command line which is very handy.
 
-    $ ufw allow from {your-ip} to any port 22
-    $ ufw allow 80
-    $ ufw allow 443
-    $ ufw disable
-    $ ufw enable
+    sudo ufw allow from {your-ip} to any port 22
+    sudo ufw allow 80
+    sudo ufw allow 443
+    sudo ufw disable
+    sudo ufw enable
 
 The first one is a redundancy measure that makes sure that only connections from our IP can connect via SSH (standard SSH port).[^2] While the second and third open up http and https traffic. 
 
@@ -145,12 +150,11 @@ You're all set.
 
 ###fail2ban
 
-![Banned gif](http://knowyourmeme.com/photos/254517-downvoting-roman-commodus-thumbsdown)
+![Banned gif](http://www.fail2ban.org/fail2ban_logo.png)
 
 fail2ban is a great package that actively blocks suspicious activity as it occurs. From their [wiki](http://www.fail2ban.org/wiki/index.php/Main_Page) Fail2ban scans log files (e.g. `/var/log/apache/error_log`) and bans IPs that show the malicious signs -- too many password failures, seeking for exploits, etc...Out of the box Fail2Ban comes with filters for various services (apache, courier, ssh, etc).
 
     apt-get install fail2ban
-
 
 ###2 Factor Authentication
 
@@ -165,12 +169,12 @@ These are quite a few hurdles to jump. Even then to gain root access via sudo th
 
 Install this package
 
-    $ apt-get install libpam-google-authenticator
+    apt-get install libpam-google-authenticator
 
 Set up by running this command and following the instructions:
 
-    $ su deploy
-    $ google-authenticator
+    su deploy
+    google-authenticator
 
 2FA is very easy and adds a great layer of security. 
 
@@ -180,11 +184,11 @@ This is really more of a simple pleasure and a monitoring tool that helps you se
 
 There's a great writeup by [DigitalOcean on Logwatch install and config], but if we're keeping to 10 minutes we'll just install it and run a cron job to run it and email us daily. 
 
-    $ apt-get install logwatch
+    apt-get install logwatch
 
 Add a cron job
 
-    $ vim /etc/cron.daily/00logwatch
+    vim /etc/cron.daily/00logwatch
 
 Add this line to the cron file:
 
