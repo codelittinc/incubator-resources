@@ -10,8 +10,7 @@ On large scale, you'll be better off with a full automated setup using something
 **Disclaimer: This is meant to serve as a primer and a base. You should extend upon it as your needs dictate**
 
 ###First things first
-
-We don't even have a password for our root user. We'll want to select something random and complex. We use a password manager's password generater set to the most difficult setting. The PW manager saves the password and it is encrypted with access only given by a long master password. A couple of redundancies are provided here (long, complex, random password + password is stored behind encryption/another long password). You'll only need this if you can't SSH in or lose your sudo password. 
+We don't even have a password for our root user. We'll want to select something random and complex. We use a password manager's password generater set to the most difficult setting. The PW manager saves the password and it is encrypted with access only given by a long master password. A couple of redundancies are provided here (long, complex, random password + password is stored behind encryption/another long password). Whether you use a PW manager or some other means, keep this safe and behind some form of encryption. You'll only need this root password if you lose your sudo password. 
 
 `# passwd`
 
