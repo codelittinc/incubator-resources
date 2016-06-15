@@ -1,7 +1,6 @@
 Your First 10 Minutes on a Server
 =========
-
-[My First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers), by Bryan Kennedy, is an amazing primer into securing a server against most attacks. It is a must read. We have a few modifications to his approach that we wanted to document as part of our efforts of externalizing our processes and best practices. We also wanted to spend a bit more time explaining a few things that younger engineers may benefit from.
+[My First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers), by Bryan Kennedy, is an amazing primer into securing a server against most attacks. It is a must read. We have a few modifications to his approach that we wanted to document as part of our efforts of [externalizing our processes and best practices](https://github.com/codelittinc/incubator-resources). We also wanted to spend a bit more time explaining a few things that younger engineers may benefit from. 
 
 I check our logwatch email every morning and thoroughly enjoy watching several hundreds (sometimes 1000s) of attempts at gaining access with little prevail. This general overview works for Debian/Ubuntu servers which are our personal favourite choice. These usually only serve as hosts for docker containers, but principles still apply. We'll go more in depth in locking down a server specifically for use as a Docker host another time.
 
@@ -197,11 +196,10 @@ Add this line to the cron file:
 
 
 ###All done
+There you are. Your main concern and point of vunerability after completing this will be your application and services. These are another animal entirely though. 
 
-There you are. Your main concern and point of vunerabilityafter completing this will be your application and services. These are another animal entirely though. 
 
-
-If you want to know more about our best practices, take a look in our [repository](https://github.com/codelittinc/incubator-resources). We open source all of our policies and best practices as well as continue to add to them there.
+We're making a big push to externalize our processes and best practices, if you're interested in learning more take a look at our [repository](https://github.com/codelittinc/incubator-resources). We open source all of our policies and best practices as well as continue to add to them there.
 
 ------
 [^1]: Make sure it's `.pub`. This seems to be very simple, but I've seen two people (both *not* members of our organization -- it would be a quick way to stop being part of our org.) in my career, send me their private key (`id_rsa` without the .pub extension) when asking for their public keys. 
