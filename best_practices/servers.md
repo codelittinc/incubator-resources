@@ -1,6 +1,6 @@
 Your First 10 Minutes on a Server
 =========
-[My First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers), by Bryan Kennedy, is an amazing primer into securing a server against most attacks. It is a must read. We have a few modifications to his approach that we wanted to document as part of our efforts of [externalizing our processes and best practices](https://github.com/codelittinc/incubator-resources). We also wanted to spend a bit more time explaining a few things that younger engineers may benefit from. 
+[My First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers), by Bryan Kennedy, is an excellent intro into securing a server against most attacks. We have a few modifications to his approach that we wanted to document as part of our efforts of [externalizing our processes and best practices](https://github.com/codelittinc/incubator-resources). We also wanted to spend a bit more time explaining a few things that younger engineers may benefit from. 
 
 I check our logwatch email every morning and thoroughly enjoy watching several hundreds (sometimes 1000s) of attempts at gaining access with little prevail. This general overview works for Debian/Ubuntu servers which are our personal favourite choice. These usually only serve as hosts for docker containers, but principles still apply. We'll go more in depth in locking down a server specifically for use as a Docker host another time.
 
@@ -158,7 +158,7 @@ fail2ban is a great package that actively blocks suspicious activity as it occur
 
 ###2 Factor Authentication
 
-2FA is not optional for us. When building [Incoin](https://www.incoin.io) or anything else that has very sensitive requirements. Theoretically, if you're enforcing 2FA (on top of all these other measures), then in order to gain access to your server, the attacker would have to have:
+2FA is not optional for us. When building anything that has very sensitive requirements. Theoretically, if you're enforcing 2FA (on top of all these other measures), then in order to gain access to your server, the attacker would have to have:
 
 1. Access to your certificate and key to access VPN
 2. Access to your computer to have your private key
