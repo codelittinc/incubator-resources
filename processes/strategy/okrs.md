@@ -16,20 +16,20 @@ Read more about OKRs here: https://www.wrike.com/blog/okrs-quarterly-planning/
 
 2. Each employee is asked to submit OKRs they think the department should prioritize.
 
-Departments are as follows:
+    Departments are as follows:
 
-- Engineering
-    - Consists of all engineers - Bruno is responsible to collect them
-- Design
-    - Consists of all designers - Vicky is responsible to collect them
-- Marketing
-    - Consists of everyone - Cody is responsible to collect them
-- Sales
-    - Consists of non-engineers and non-designers - Cody is responsible to collect them
-- Finance
-    - Consists of Vincent and Cody - Cody is responsible to collect them
-- Project/Product management
-    - Consists of anyone managing a project - Vincent is responsible to collect them
+    - Engineering
+        - Consists of all engineers - Bruno is responsible to collect them
+    - Design
+        - Consists of all designers - Vicky is responsible to collect them
+    - Marketing
+        - Consists of everyone - Cody is responsible to collect them
+    - Sales
+        - Consists of non-engineers and non-designers - Cody is responsible to collect them
+    - Finance
+        - Consists of Vincent and Cody - Cody is responsible to collect them
+    - Project/Product management
+        - Consists of anyone managing a project - Vincent is responsible to collect them
 
 
 3. Company OKRs are derived from employee input and put together by Cody with input from team leads.
