@@ -31,7 +31,7 @@ We keep a list of ideas in the "Marketing 2.0" Trello board. When you’re in th
 vs.
 ####How we use Docker to save 20 hours a week
 
-Admittedly, the two titles don't share a 1:1 relationship so comparing them might be incorrect, but it's clear that the second post is more interesting and is *probably* more actionalble.  
+Admittedly, the two titles don't share a 1:1 relationship so comparing them might be incorrect, but it's clear that the second post is more interesting and is *probably* more actionable.  
 
 # The Content (step 2)
 
@@ -97,7 +97,7 @@ When you finish your first draft, move the card to the "posts to be edited by Be
 
 6. Don’t be an echo chamber. Say something original. 
 
-# When it's published (Step 4)
+# When it's published (Step 3)
 
 Add link to forums WHERE IT WILL BE FOUND USEFUL. We are ANTI-spam here. For example, a non-technical intro will not be appreciated by a very technical forum. A corporate education piece will not be useful to a startup crowd, etc. A few examples of different places where our content does quite well are:
 
