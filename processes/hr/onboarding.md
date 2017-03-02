@@ -12,6 +12,9 @@ Are you stoked?
 
 3. Employee/Contractor agreement - This is a more binding and more detailed version of the offer letter. It also covers items such as inventions, etc.
 
+##What happens when you get hired
+On your first day, we will have some introductions during the daily standup. Generally, we all turn video on and go around introducing ourselves. Then you'll get signed up with all necessary accounts, get the rundown of all current projects (and key past projects) and learn a bit more about your teammates and their specialties. Make sure to go through our Slack channels and join any you find interesting.  
+
 ##Tools you'll need access to
 
 Native tools that need to be downloaded will have a download link
@@ -23,6 +26,7 @@ Native tools that need to be downloaded will have a download link
 2. Slack - [Sign in and then download](https://slack.com/) - (We mostly use this to chat internally and with partners)
 3. Syncthing - [Download](https://syncthing.net/) - (P2P, encrypted alternative to Dropbox)
 4. [Trello](https://trello.com/) - (PM and tracking)
+5. Our blogging platform, Ghost. Ask Cody or Ben for an invite, then add your Bio and headshot.
 
 ####ENGINEERING SPECIFIC
 
@@ -31,7 +35,11 @@ Native tools that need to be downloaded will have a download link
 
 ####SALES/MARKETING SPECIFIC
 
-1. Add info here
+Make sure to ask for invites for the following!
+
+1. We use Heap and Google Analytics for site analytics.
+2. We use [Autopilot](autopilothq.com) for marketing automation.
+3. Twitter + Buffer
 
 
 ####DESIGN TEAM SPECIFIC
