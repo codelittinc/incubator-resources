@@ -5,7 +5,7 @@ Encryption is to be used at all times when transmitting anything more sensitive 
 
 Why? Privacy and security. 
 
-We work with a lot of 3rd parties. When sending or recieving info such as Secret Keys or Passwords, use a secure sending service like [Boveda.](https://www.bovedahq.com) Do not send sensitive information in plaintext. 
+We work with a lot of 3rd parties. When it is unavoidable to send or receive info such as secret keys or passwords, prefer GPG encryption if the other party is capable. When they do not know how to use GPG, use a secure sending service like [Boveda.](https://www.bovedahq.com) Do not send sensitive information in plaintext under any circumstances.
 
 ###Email
 
