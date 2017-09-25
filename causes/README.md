@@ -1,8 +1,8 @@
-#Causes
+# Causes
 
 ## Overview
 
- so we're trying to promote that within our own culture and take it several steps further. Below are resources to get involved. 
+We try to promote net and software freedom within our culture. Basically, "Don't be evil." Below are resources to get involved. 
 
 ## Donate without cost to you
 
