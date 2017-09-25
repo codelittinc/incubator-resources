@@ -12,8 +12,11 @@ Are you stoked?
 
 3. Employee/Contractor agreement - This is a more binding and more detailed version of the offer letter. It also covers items such as inventions, etc.
 
-## What happens when you get hired
-On your first day, we will have some introductions during the daily standup. Generally, we all turn video on and go around introducing ourselves. Then you'll get signed up with all necessary accounts, get the rundown of all current projects (and key past projects) and learn a bit more about your teammates and their specialties. Make sure to go through our Slack channels and join any you find interesting.  
+## What happens on your first day
+
+1. You'll receive an email notification for your new Codelitt email address. This address will be where other invites for tools, such as Zenhub, Trello, etc are sent.  
+
+2. On your first day, we will have some introductions during the daily standup at 11 a.m. ET. Generally, we all turn video on and go around introducing ourselves. Then you'll get signed up with all necessary accounts, get the rundown of all current projects (and key past projects) and learn a bit more about your teammates and their specialties. Make sure to go through our Slack channels and join any you find interesting.  
 
 ## Tools you'll need access to
 
@@ -62,8 +65,7 @@ Make sure to ask for invites for the following!
 1. SSH Key for your @codelitt.com email address
 
 
-
 ## Things you'll need to know
 
 1. How we plan projects, break them up into user epics/stories, and spec out features - Read up by going to drive.google.com. It's in the folder marked Codelitt General Info > Codelitt Processes > How we use User Stories, Trello/Zenhub/Github issues & Specs in Google Docs
-2. Standups every day at 9 a.m. ET
+2. Standups every day at 11 a.m. ET
