@@ -7,13 +7,13 @@ Why? Privacy and security.
 
 We work with a lot of 3rd parties. When it is unavoidable to send or receive info such as secret keys or passwords, prefer GPG encryption if the other party is capable. When they do not know how to use GPG, use a secure sending service like [Boveda.](https://www.bovedahq.com) Do not send sensitive information in plaintext under any circumstances.
 
-###Email
+### Email
 
 PGP/GPG encrypted email is a must. Regardless of your distribution or OS, you'll need a encryption key manager, email client, and compatible PGP/GPG plugin. 
 
 Here is a good explanation of [PGP/GPG encryption and how it works.](https://www.mailvelope.com/help#basics)
 
-####Mac
+#### Mac
 
 Encryption key manager/protocol, GPGTools (GnuPG implementation on OS X): https://gpgtools.org/
 
@@ -27,7 +27,7 @@ PGP/GPG Plugin:
 - Airmail GPG Plugin: [Hockeyapp Download page](https://rink.hockeyapp.net/apps/12d0753a9a3cecd2f00b262409be4ec2)
 - Thunderbird, Enigmail: https://addons.mozilla.org/en-us/thunderbird/addon/enigmail/
 
-####Linux
+#### Linux
 
 Encyrption key manager/protocol:
 
@@ -42,7 +42,7 @@ PGP/GPG Plugin:
 
 - Thunderbird, Enigmail: https://addons.mozilla.org/en-us/thunderbird/addon/enigmail/
 
-####Windows
+#### Windows
 
 Encryption key manager/protocol, Gpg4win (GnuPG implementation on Windows): http://gpg4win.org/
 
@@ -53,6 +53,6 @@ PGP/GPG Plugin for Thunderbird, Enigmail: https://addons.mozilla.org/en-us/thund
 
 
 
-###Password management
+### Password management
 
 [1Password](https://agilebits.com/onepassword)
