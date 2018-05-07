@@ -8,7 +8,7 @@ On large scale, you'll be better off with a full automated setup using something
 
 **Disclaimer: This is meant to serve as a primer and a base. You should extend upon it as your needs dictate**
 
-###First things first
+### First things first
 We don't even have a password for our root user. We'll want to select something random and complex. We use a password manager's password generater set to the most difficult setting. The PW manager saves the password and it is encrypted with access only given by a long master password. A couple of redundancies are provided here (long, complex, random password + password is stored behind encryption/another long password). Whether you use a PW manager or some other means, keep this safe and behind some form of encryption. You'll only need this root password if you lose your sudo password. 
 
 `# passwd`
@@ -18,7 +18,7 @@ Next you'll need to update the repositories and upgrade your system applying the
     apt-get update
     apt-get upgrade
 
-###Add your user
+### Add your user
 
 You should never be logging on to a server as root. We follow a similar convention as Bryan in our user name, but you could use whatever convention you'd like. With a small team, having one login user hasn't been an issue for us, but with a larger team best practice would dictate that different users would be setup with different levels of permission only granting sudo permissions to a select few. 
 
@@ -35,7 +35,7 @@ usermod -s /bin/bash deploy
 
 Remember `chmod 700` means that owner can read, write, execute. We're still root but in a minute we'll recursively `chown` this folder for the deploy user and deploy group. Only this user should have access to do anything with the .ssh folder.
 
-###Require ssh key authentication
+### Require ssh key authentication
 
 We tend to avoid passwords for logging into servers. There was a lot of [discussion](https://news.ycombinator.com/item?id=5316691) around this after Bryan's original guide came out, but I tend to fall into this camp as well. Here are a few notes on this:
 
@@ -57,7 +57,7 @@ Let's set the right permissions based on the Linux security [principal of least 
 
 We're going to come back in a second after we've properly tested our deploy user and sudo to disable logging in as the root user and enforce ssh key logins only. 
 
-###Test `deploy` user and setup sudo
+### Test `deploy` user and setup sudo
 
 We're going to test logging in as deploy, while keeping our ssh connection as `root` open just in case. If it works, we'll use our open connection as `root` user to set a password for deploy. Since we're disabling password logins, this password will be used when sudo-ing. Again we use a pw manager to create a complex and random password, saving it behind an encrypted wall, and sharing it among the team (syncing the encrypted pw file). 
 
@@ -75,7 +75,7 @@ Add the `deploy` user below the `root` user as shown below. Make sure to comment
 
 
 
-###Enforce ssh key logins
+### Enforce ssh key logins
 
 ssh configuration for the machine is stored here:
 
@@ -90,7 +90,7 @@ You'll want to add these lines to the file. I think they're pretty self-explanat
 Enable all these rules by restarting the ssh service. You'll probably need to reconnect (do so by using your deploy user!) 
     service ssh restart
 
-###Setting up a firewall
+### Setting up a firewall
 
 There are usually two camps. Those who use IPtables directly and those who use a handy interface called `ufw` which is a layer on top of IPtables meant to simplify things. Simple is generally better with security. The [DigitalOcean ufw](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server) is really good and goes over the basics.
 
@@ -118,7 +118,7 @@ The first one is a redundancy measure that makes sure that only connections from
 
 
 
-###Automated security updates
+### Automated security updates
 
 I like these. They're not perfect, but it's better than missing patches as they come out. 
 
@@ -148,7 +148,7 @@ Make the file look like this:
 You're all set. 
 
 
-###fail2ban
+### fail2ban
 
 ![Banned gif](http://www.fail2ban.org/fail2ban_logo.png)
 
@@ -156,7 +156,7 @@ fail2ban is a great package that actively blocks suspicious activity as it occur
 
     apt-get install fail2ban
 
-###2 Factor Authentication
+### 2 Factor Authentication
 
 2FA is not optional for us. When building anything that has very sensitive requirements. Theoretically, if you're enforcing 2FA (on top of all these other measures), then in order to gain access to your server, the attacker would have to have:
 
@@ -178,7 +178,7 @@ Set up by running this command and following the instructions:
 
 2FA is very easy and adds a great layer of security. 
 
-###Logwatch 
+### Logwatch 
 
 This is really more of a simple pleasure and a monitoring tool that helps you see what's going on after the fact. Logwatch monitors your logfiles and when configured sends you a daily email with the information parsed very nicely. The output is quite entertaining to watch and you'll be surprised at how many attempts are made every day to gain access to your server. I install it if for no other reason than to show the team how important good security is. 
 
@@ -195,7 +195,7 @@ Add this line to the cron file:
     /usr/sbin/logwatch --output mail --mailto you@example.com --detail high
 
 
-###All done
+### All done
 There you are. Your main concern and point of vunerability after completing this will be your application and services. These are another animal entirely though. 
 
 
