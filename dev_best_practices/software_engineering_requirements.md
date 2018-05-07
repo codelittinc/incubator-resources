@@ -56,14 +56,14 @@ Every engineer on our team has contributed to this doc and we welcome outside co
 
     * Connect containers
 
-    * [Understand how we use them across environments](./environments.md)
+    * [Understand how we use them across environments](./environment.md)
 
 
 ## Methodologies
 
 * [TDD](https://en.wikipedia.org/wiki/Test-driven_development)
 
-* [BDD](https://pt.wikipedia.org/wiki/Behavior_Driven_Development)
+* [BDD](https://en.wikipedia.org/wiki/Behavior_Driven_Development)
 
 * [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
 

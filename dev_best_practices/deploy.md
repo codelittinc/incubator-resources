@@ -5,7 +5,7 @@ We've fairly scripted method for doing the deploy with a one line command
 
 Put the following file on the bin/ of you project
 
-[deploy](https://github.com/codelittinc/incubator-resources/blob/master/best_practices/deploy/deploy)
+[deploy](https://github.com/codelittinc/incubator-resources/blob/master/dev_best_practices/deploy/deploy)
 
 Open the bash, go to your project folder and use the following command:
 
