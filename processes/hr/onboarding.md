@@ -56,7 +56,7 @@ Make sure to ask for invites for the following!
 
 #### ALL EMPLOYEES
 
-1. [Encryption](/best_practices/encryption.md) - particularly PGP 
+1. [Encryption](/dev_best_practices/encryption.md) - particularly PGP 
 2. Payroll - Speak with Cody about getting setup with payroll. You can find more about your options and information you need to provide here: [Payroll options](https://docs.google.com/document/d/1bbir23R4ueAqWBA0Ace1HjNq3u5EsynY_G5KUHhC1mM/edit#)
 
 
