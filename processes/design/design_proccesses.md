@@ -6,7 +6,7 @@ Design Processes
 - Trello cards should have corresponding PDFs attached to them to help devs find things.
 
 
-##Illustrator
+## Illustrator
 
 - We work primarily on Illustrator, in conjunction with Photoshop for anything bitmap related. This application has a lot of gains in our line of work: first off, multiple artboards. You could argue that a PSD file has layers, but it’s not the same thing. Artboards allow you to see the entire project displayed at once, without having to go activating and deactivating different layers. Another positive attribute is that Illustrator works with vectors, so there’s no limit to the resolution of the source files. Monitors keep increasing their resolutions and soon designing for those will mean hefty PSD files, which isn’t the case on Illustrator.
 
@@ -21,7 +21,7 @@ Design Processes
 - Illustrator can render many different shades of grey, but not so much low resolution screens. Designers should try and stick to a few to guarantee appropriate rendering of design choices in as many devices as possible.
   
   
-##Getting files to engineers
+## Getting files to engineers
 
 A lot can go unsaid or forgotten when talking about projects. We spend some time preparing files so that they’re easy to understand for developers. This includes adding small descriptions where necessary outside of the artboards as guides for devs to follow. This could include a link to an animation or transition, explaining the logic of a grid, showing the different statuses of a CTA, etc. This space is used for internal communication and devs know to look out for it.
 
@@ -40,7 +40,7 @@ A lot can go unsaid or forgotten when talking about projects. We spend some time
 - Lines and anything with a stroke need to be expanded before sending files over to developers. 
   
 
-##General web stuff
+## General web stuff
 
 - Icons must be saved as SVG, and exported as PNG at normal resolution and x2. (SVGs are vectors and can scale, 1 file per SVG is fine).
 
@@ -65,7 +65,7 @@ A lot can go unsaid or forgotten when talking about projects. We spend some time
 - Research says that on mobile the correct clickable area for a CTA should be no less than 40px. Anything smaller runs the risk of being too small for the average sized finger to press.
   
 
-##Sync
+## Sync
 
 - The latest Illustrator files should be tagged RED, accompanied by its PDF tagged in ORANGE (any other color tags are used internally by the design team, for example files known to be corrupted are tagged in yellow). Most of us are on macs and should be able to see the tags. To help those who aren’t, include the date the file was created to the end of your file name, for example:
 
@@ -120,7 +120,7 @@ Codelitt - Project Name - Specific Feature - ddmmyy (without the spaces in betwe
                 Codelitt-Project X-Feature 1-ddmmyy.pdf
 
   
-##Emails
+## Emails
 
 Emails are coded in HTML with inline CSS only, meaning there are several restrictions designers need to keep in mind in order for the final result to look like what was planned and approved.
 
@@ -141,7 +141,7 @@ Emails are coded in HTML with inline CSS only, meaning there are several restric
 - All images should be the exact size they need to appear on the email.
   
 
-##Photography repo
+## Photography repo
 
 - Death to the stock photo - [www.deathtothestockphoto.com](http://www.deathtothestockphoto.com)
 
@@ -150,7 +150,7 @@ Emails are coded in HTML with inline CSS only, meaning there are several restric
 - Twenty20 - [www.twenty20.com](http://www.twenty20.com)
   
 
-##Design inspiration repo
+## Design inspiration repo
 
 - Dribble -[www.dribbble.com](http://www.dribbble.com/)
 
@@ -161,7 +161,7 @@ Emails are coded in HTML with inline CSS only, meaning there are several restric
 - One Page Love (one page websites) -[www.onepagelove.com](http://www.onepagelove.com/)
   
 
-##Animations / transitions research
+## Animations / transitions research
 
 - Codepen -[www.codepen.io](http://www.codepen.io/)
 
