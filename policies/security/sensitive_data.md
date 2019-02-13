@@ -1,9 +1,41 @@
+# Email Precautions
+
+Emails often host scams and malicious software. To avoid virus infection or data theft, we instruct everyone to:
+
+- Avoid opening attachments and clicking on links when the content is not adequately explained (e.g. “watch this video, it’s amazing”).
+- Be suspicious of clickbait titles (e.g. offering prizes, advice).
+- Check email and names of people they received a message from to ensure they are legitimate.
+- Look for inconsistencies or giveaways (e.g. grammar mistakes, capital letters, an excessive number of exclamation marks).
+
+# Device Precautions
+
+When employees use their digital devices to access company emails or accounts, they introduce security risks to our data. We advise our employees to keep both their personal and company-issued computer, tablet and cell phone secure by doing the following:
+
+- Keep all devices password-protected.
+- Choose and upgrade a complete antivirus software.
+- Ensure they do not leave their devices exposed or unattended.
+- Install security updates of browsers and systems monthly or as soon as updates are available.
+- Log into company accounts and systems through secure and private networks only.
+- We also advise our employees to avoid accessing internal systems and accounts from other people’s devices or lending their own devices to others.
+
+# Additional Precautions
+
+- To reduce the likelihood of security breaches, we also instruct our employees to:
+- Enable two-factor authentication on email accounts and third-party services like Github.
+- Refrain from downloading suspicious, unauthorized or illegal software on their company equipment.
+- Avoid accessing suspicious websites.
+- Report stolen equipment as soon as possible.
+- Change all account passwords at once when a device is stolen.
+- Report perceived threats or possible security weaknesses in company systems.
+
+# About sensitive data
+
 Let's talk about sensitive data and to do it we have only two rules:
 
  - Don't talk about sensitive data
  - Don't write down sensitive data
 
-Jokes aside this is a sensitive topic(no pun intended), but first, what makes a data sensitive?
+Jokes aside this is a sensitive topic (no pun intended), but first, what makes a data sensitive?
 
 **Definition:** Sensitive information is data that must be protected from unauthorized access to
 safeguard the privacy or security of an individual or organization.
@@ -21,70 +53,82 @@ corporate information from unauthorized access are becoming integral to corporat
 methods include metadata management and document sanitization.
 
 **Classified information:** Classified information pertains to a government body and is restricted
-according to level of sensitivity (for example, restricted, confidential, secret and top secret).
+according to the level of sensitivity (for example, restricted, confidential, secret and top secret).
 
 Now to a quick quiz:
-What is a sensitive data?
+What is sensitive data?
   1. A server key
   2. Service access key
   3. A service name
   4. A Password
 
-Prepared for the answer?
+Are you prepared for the answer?
 
-1. A server key is a sensitive data in most of the cases, for instance there are a lot of bots running
-on the Github repositories (not made by Github) that searche for AWS keys so it can create linux servers
+1. A server key is sensitive data in most of the cases, for instance, there are a lot of bots running
+on the Github repositories (not made by Github) that searches for AWS keys so it can create Linux servers
 to farm bitcoins.
 
-2. A service access key is something to be really concerned about. Writer's personal case: Once in 8 hours
+2. A service access key is something to be concerned about. Writer's case: Once in 8 hours
 48 Amazon servers where setup in my account and I got a 12 thousand dollars bill from because my access key
-was stolen, at the time I didn't know about the best way to use it so I stored it in plain text, thanks
- to their awesome customer service the bill was turned down after explanation. Lesson learned.
+was stolen, at the time I didn't know about the best way to use it, so I stored it in plain text, thanks to their excellent customer service the bill was turned down after explanation. Lesson learned.
 
 2. Is a service name a sensitive data? It depends, what if it is the service that you use to secure all
 your keys? If so then yes, it is. And what if it is a new product that you don't want the competition to
-know about? yes again. If it is a public or common server that doesn't bring any harm to the company then no.
-Some of the informations that a company make public may be a hidden bomb just waiting for someone to exploit it.
+know about? Yes again. If it is a public or common server that doesn't bring any harm to the company then no.
+Some of the information that a company makes public may be a hidden bomb just waiting for someone to exploit it.
 
-3. A password is always a sensitive data, it exists with that purpose.
+3. A password is always sensitive data; it exists with that purpose.
 
 So as you saw a sensitive data is something that may bring harm to your organization if it is gotten by the wrong
-people, so what is the best way to keep an information secret? Don't write it down and make sure to
-not be kidnapped, period.
+people, so what is the best way to keep an information secret? Don't write it down and make sure not to be kidnapped, period.
 
-Unfortunatelly in our everyday work we can not affort to not write some keys, can we memorize the following password?:
+Unfortunately, in our everyday work we can not afford not to write some keys, can we memorize the following password?:
 
 49AGvnuKd_ns@6^^ms64
 
-Yes, we can and a good way to memorize it is using the letter per word technique:
+Yes, we can, and an excellent way to memorize it is using the letter per word technique:
 
-4 9 APPLE GOLF visa nut usa KOREAN drip _ nut skype @ 6 ^ ^ music skype 6 4 ( provided by [passwordgenerator](https://passwordsgenerator.net/)
+4 9 APPLE GOLF visa nut usa KOREAN drip _ nut skype @ 6 ^ ^ music skype 6 4 ( provided by [passwordgenerator](https://passwordsgenerator.net/) )
 
-For those who can memorize it easily, congratulations! would you be able to do it for 20 different services
+For those who can memorize it quickly, congratulations! Would you be able to do it for 20 different services
 and for private keys with 2048 characters?
 If you say yes again you are a hero, but if you work in Miami and I work in Brazil, how will you send it to
 me if needed?
 
-To have a sensitive data and how to keep it secure is a problem, to share it with the people who need it is
+To have sensitive data and how to keep it secure is a problem, to share it with the people who need it is
 another harder.
 
-In order to transfer sensitive data a few companies go with spliting the information in two and sending in two
-different places so an attacker would have more problems, example:
+To transfer sensitive data, a few companies go with splitting the information in two and sending in two
+different places so an attacker would have more problems, for example:
 
 To send the password: `49AGvnuKd_ns@6^^ms64` I can send `49AGvnuKd` to your email and `_ns@6^^ms64` to your phone
-number as a SMS.
+number as an SMS.
 
-Is this way safe? It is safer than sending it in just one place, is it safe enough? Not really. If someone stole
+Is this way safe? It is more reliable than sending it in just one place, is it safe enough? Not really. If someone stole
 your phone the password is stored there in plain text, so no deal.
 A better option for tech people is to share it using PGP, which is completely covered in our [another article](#add-link)
-Another is to use [Boveda](https://www.bovedahq.com/) which fills the gap between non tech people and safe data transference.
+Another is to use [Boveda](https://www.bovedahq.com/) which fills the gap between nontech people and safe data transference.
 
 So when dealing with any sensitive data may it be storage or transference be aware of the risks and always make sure to do it
-in the safest way possible, you never know which information in wrong people hands will turn down your organization,
+in the safest way possible, you never know which information is in wrong people hands will turn down your organization,
 or worse, your personal life.
 
-Also to store sensitive data locally never do it in plain text, remember the amazon case I metioned before? The best way
-is encrypting it with GPG, which is detailed explained in [this article](#add-link)
+Also to store sensitive data locally never do it in plain text, remember the Amazon case I mentioned before? The best way
+is encrypting it with PGP.
+
+
+# Common Issues With Confidential Data And Development
+
+If we consider an engineer’s daily tasks and challenges, it’s not uncommon to end up in a situation in which skipping best practices seems like a option to get to a faster solution. This section will cover some of these situations so we can be aware of them, and provide a way to solve them if necessary.
+
+- A teammate needs a key to run the project, and it’s urgent. So, to do it faster, you send it through Slack/Email.
+  - This is a risky move because we don’t own the server the runs these tools. If they have a breach or an unclear security policy, this can be a huge problem
+  - To solve it, delete the message as fast as possible. If your teammate was the one who shared it, let him or her know through a direct message
+  - Instead of using these tools, you can easily use Boveda or 1Password.
+
+- You were rushing to deploy the project and pushed the code to the remote repository with a key exposed.
+  - This move has the same risk as sharing it through messaging tools. What if this repository becomes public in the future? This can be another huge problem.
+	 - To solve it, you will need to delete this record from the repository. You can do this using `git rebase -i`. For example, if it's your last commit, you can do `git rebase -i HEAD~2` and delete the second line within the editor window that pops up. Then, force push to remote git by using `git push origin +branchName –force`
 
 sources:
 
