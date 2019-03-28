@@ -6,13 +6,32 @@ commits that not even you can understand!
 
 # Just get to the point
 
-If that's the way you roll, here's a commit message template!
+Rule of thumb:
+
+1. Create a concise commit message, your team will read it and it will be used to tell the story of the project
+2. [Squash](https://github.com/wprig/wprig/wiki/How-to-squash-commits) the related commits
+
+Good examples of commit messages:
+
+- Update presentations engine version to 1.0.2
+- Fix the creation of documents copies when creating a shared record
+- Refactor presentation's engine page builder
+- Add support to PPT on presentation's editor
+- Remove about page's cover image
+
+Bad examples of commit messages:
+
+- Small fix
+- Don't allow user to click on button
+- Refactor pages
+
+Here's a commit message template
 
 ```
 
-# 50 Character maximum: <type>(<scope>): <Subject>
+# 50 Character maximum:  <Subject>
 
-# <Trello card link>
+# Issue link
 
 # Truncate to 72 characters maximum:
 # Paragraph 1 explaining why this is necessary
@@ -46,12 +65,12 @@ Placed in `~/.gitconfig` like this:
 Some wisdom from:
 
 [AngularJS](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)
-[Lullabot](https://www.lullabot.com/articles/git-best-practices-workflow-guidelines)  
-[tbaggery](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)  <- Tim Pope, so pay attention!  
-[Seth Robertson](https://sethrobertson.github.io/GitBestPractices/)  
-[Open Stack](https://wiki.openstack.org/wiki/GitCommitMessages)  
-[Chris Beams](http://chris.beams.io/posts/git-commit/)  
-[Thoughtbot](https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message) 
+[Lullabot](https://www.lullabot.com/articles/git-best-practices-workflow-guidelines)
+[tbaggery](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)  <- Tim Pope, so pay attention!
+[Seth Robertson](https://sethrobertson.github.io/GitBestPractices/)
+[Open Stack](https://wiki.openstack.org/wiki/GitCommitMessages)
+[Chris Beams](http://chris.beams.io/posts/git-commit/)
+[Thoughtbot](https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message)
 
 If you read the above links, you'll notice that there are a number of similarities. Let's try to distill
 their contents into a generic scaffolding that any of our projects may use.
@@ -83,10 +102,6 @@ Starting with Tim Pope's standard:
 
       - Use a hanging indent
 
-In addition, we will be modifying our subject lines to follow the Angular example above:  
-`<type>(<scope>): <subject>`
-
-[Here](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#type) is a list of possible types, scopes and subjects.
 
 # More than Once
 That's a nice way to make commits, but it doesn't explain stuff _outside_ of actually
@@ -118,17 +133,17 @@ Assimilating information from these, here is a prototypal Codelitt commit messag
 
 Tim Pope's commit messages + Seth Robertson's workflow + Lullabot's commit review and orthogonality.
 
-It sounds easy, but it's also probably pretty easy to mess up. Here's the plan:  
+It sounds easy, but it's also probably pretty easy to mess up. Here's the plan:
 
 ### Individual commits
 
-1. Create your first line. It may not exceed 50 characters. It must be capitalized after the type, scope and subject.  
+1. Create your first line. It may not exceed 50 characters.
 Make it in the present tense. Do not use the '-m' command, as you will not be able to produce additional lines of input.
 
 2. Two newline characters later, Insert a link to any relevant Trello card that this commit came from.
 
 3. Another two newline characters later, begin an explanatory paragraph which does not exceed
-72 characters of width. It's okay to wrap to more lines. This paragraph should answer:  
+72 characters of width. It's okay to wrap to more lines. This paragraph should answer:
   - Why is this change necessary?
   - How does it address the issue?
   - What side effects does this change have?
@@ -186,36 +201,36 @@ Why, Joe, you make excellent `git` commit messages! How nice of you.
 
 # Example 2 (Intertwined Components)
 
-Now, let's say Joe's co-worker, "Laura", also needs to make a commit (or two!).  
+Now, let's say Joe's co-worker, "Laura", also needs to make a commit (or two!).
 
-She's discovered that the core Higgs-Boson Generator software has a fatal bug  
-that might cause a crash in the system at some point! So, she quickly devises  
-a solution. However, she doesn't quite know how to structure her `git` commits.  
+She's discovered that the core Higgs-Boson Generator software has a fatal bug
+that might cause a crash in the system at some point! So, she quickly devises
+a solution. However, she doesn't quite know how to structure her `git` commits.
 The problem is, the change that she needs to make in the Higgs-Boson Generator
-also requires software in the Recombobulator and Neuman-force Pullifier to be 
-modified! Oh, what is she to do?  
+also requires software in the Recombobulator and Neuman-force Pullifier to be
+modified! Oh, what is she to do?
 
 But, don't worry! We have our trusty principles of `orthogonality`, `early and
 often commits`, and `not getting in the way`! (Laura is already good at individual
-commits!)  
-  
-What she decides to do is separate each commit into code that affects one module
-at a time:  
+commits!)
 
-      fix(higgsCore) Slow Higgs-Boson Generator Impulse
+What she decides to do is separate each commit into code that affects one module
+at a time:
+
+      Update presentations engine version to 1.0.2
 
       http://www.trello.com/yyyyyyyyy
 
       We thought the Higgs-Boson Generator would be able to sustain a full
       impulse load of energy, but our simulated test suite shows that this
-      will eventually fail to be the case. However, the problem can be 
+      will eventually fail to be the case. However, the problem can be
       solved for 10^29 years by reducing the impulse input to 3/4ths of
       our original projected load metric.
 
       There are side effects that will require modification of other vital
       modules:
 
-      - The Recombobulator will need a modification to the phase shift 
+      - The Recombobulator will need a modification to the phase shift
       algorithm, since its resistance will increase quadratically with
       our reduction of Higgs-Boson impulse.
 
@@ -225,7 +240,7 @@ at a time:
 
 ---
 
-      fix(phaseRec) Improve phase shift algorithm
+      Refactor presentation's engine page builder
 
       http://www.trello.com/zzzzzzzzz
 
@@ -238,7 +253,7 @@ at a time:
 
 ---
 
-      feat(neumanCore) Extract energy from space
+      Remove about page's cover image
 
       http://www.trello.com/aaaaaaaaa
 
