@@ -286,7 +286,8 @@ The `--force` flag makes the remote repository’s branch match your local one, 
 `git push <remote> <remote_branch_name> --force`
 
 
-# GIT useful commands
+# Everyday helpful tips
+### GIT useful commands
 
 Use `--global` to set the configuration for all projects. If git config is used without `--global` and run inside a project directory, the settings are set for the specific project.
 
@@ -357,3 +358,20 @@ Undo the last commit, preserving local changes
 Undo the last commit, without preserving local changes
 
 `git reset --hard HEAD~1`
+
+
+### GIT Branching flow
+
+ The idea is to give a clear, highly-focused purpose to each branch.
+
+- `master` : We consider `origin/master` to be the main branch where the source code of HEAD always reflects a production-ready state.
+
+- `develop` : We consider `origin/develop` to be the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.
+
+- `feature/branch-name` : The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the master or development branches.
+
+- `hotfix/branch-name` : Hotfix branches are very much like release branches in that they are also meant to prepare for a new production release. They arise from the necessity to act immediately upon an undesired state of a live production version. When a critical bug in a production version must be resolved immediately, a hotfix branch may be branched off from the corresponding tag on the master branch that marks the production version.
+
+- `fix/branch-name` - for non production bugfixes
+
+- `update/branch-name` - for updates that are not hotfixes, fixes or features
