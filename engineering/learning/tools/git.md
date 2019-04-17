@@ -24,6 +24,7 @@ Everyday helpful commands:
 * [git-rebase](#git-rebase)
 * [git-reset](#git-reset)
 * [git-push](#git-push)
+* [git-cherry-pick](#git-cherry-pick)
 
 
 ### git clone
@@ -284,6 +285,23 @@ The `-all` flag will push all of your local branches to the specified remote.
 The `--force` flag makes the remote repository’s branch match your local one, deleting any upstream changes that may have occurred since you last pulled. Do not use the `--force` flag unless you’re absolutely sure you know what you’re doing.
 
 `git push <remote> <remote_branch_name> --force`
+
+
+### git cherry pick
+
+Apply the changes introduced by some existing commits, recording a new commit for each. cherry-pick behaves just like merge.
+
+`git cherry-pick <commit-ID>`
+
+If git can’t apply the changes (e.g. you get merge conflicts), git leaves you to resolve the conflicts manually and make the commit yourself, resolve them by:
+
+`git cherry-pick --continue`
+
+If you want to bail of this step out altogether, just type:
+
+`git cherry-pick --abort`
+
+In some cases picking one single commit is not enough. You need, let’s say three consecutive commits. cherry-pick is not the right tool for this. rebase is.
 
 
 # Everyday helpful tips
