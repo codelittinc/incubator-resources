@@ -33,5 +33,5 @@ To do that, we will be creating an intermediary branch. The goal is to create a 
 2. Work normally and make sure to create a branch with less than 15 files changed. It is okay if you have breaking changes, let's call it `refactor/replacing-this-with-that`
 3. Now you create a PR from `refactor/replacing-this-with-that` to `refactor/my-cool-refactor`
 4. You can then create all the PRs for this big change pointing to `refactor/my-cool-refactor`
-5. After all the PRs to ``refactor/my-cool-refactor` are done, you create a PR from `refactor/my-cool-refactor` to the default branch (usually develop or master)
+5. After all the PRs to `refactor/my-cool-refactor` are done, you create a PR from `refactor/my-cool-refactor` to the default branch (usually develop or master)
 6. done!
