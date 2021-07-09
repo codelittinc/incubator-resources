@@ -12,3 +12,9 @@ You may find the version our company is using at: [v1.1.0 branch](https://github
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Codelitt Incubator Resources for Startups and Product Teams</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.codelitt.com" property="cc:attributionName" rel="cc:attributionURL">Codelitt Incubator</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/codelittinc/incubator-resources" rel="dct:source">https://github.com/codelittinc/incubator-resources</a>.
 
 Codelitt is a product incubator and corporate skunkworks R&D lab, using high technology & user-centric design to solve corporate problems at startup speed.
+
+## Sponsor
+![Scheduling API](https://user-images.githubusercontent.com/9488406/125080407-0dd25780-e0c5-11eb-9f70-ef958968674a.png)
+
+This repo is sponsored by [**Spurwing**](https://www.spurwing.io/), where their API Makes Adding Scheduling Quick, Reliable and Scalable.
+Use Spurwing to build and integrate Scheduling, Booking & Calendar features in your project. Read more about Spurwing [**Scheduling API on GitHub**](https://github.com/Spurwing/Appointment-Scheduling-API).
